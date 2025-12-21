@@ -1,5 +1,8 @@
 package main
 
+import "github.com/Ferari430/obsidianProject/cmd/app"
+
 func main() {
-	//app.App()
+	application := app.NewApp()
+	application.Start()
 }
