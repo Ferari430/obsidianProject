@@ -21,8 +21,9 @@ func NewCron(ticker *time.Ticker) *Cron {
 	return cron
 }
 
+// TODO: доработать, логика с for не нравится
 func (c *Cron) Run(mdFiles []string) {
-	log.Println("start cron")
+	log.Println("start cron converter")
 	n := 0
 
 	out := "/home/user/programmin/obsidianProject/data/obsidianProject/"
