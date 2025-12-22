@@ -1,56 +1,61 @@
 package cronConverter
 
 import (
-	"bufio"
 	"fmt"
-	"io"
 	"log"
-	"os"
-	"os/exec"
-	"path/filepath"
-	"strings"
 	"time"
+
+	"github.com/Ferari430/obsidianProject/internal/services/convertService"
 )
 
 type Cron struct {
-	t *time.Ticker
+	t   *time.Ticker
+	srv *convertService.ConvertService
 }
 
-func NewCron(ticker *time.Ticker) *Cron {
-	cron := &Cron{t: ticker}
+func NewCron(ticker *time.Ticker, s *convertService.ConvertService) *Cron {
+	cron := &Cron{t: ticker,
+		srv: s}
 	return cron
 }
 
+func (cron *Cron) GetFiles() []string {
+	return cron.srv.GetFiles()
+}
+
 // TODO: доработать, логика с for не нравится
-func (c *Cron) Run(mdFiles []string) {
+func (c *Cron) Run() {
 	log.Println("start cron converter")
 	n := 0
-
+	time.Sleep(time.Second)
+	mdFiles := c.GetFiles()
+	log.Println("mdFiles:", mdFiles)
 	out := "/home/user/programmin/obsidianProject/data/obsidianProject/"
-	for n != len(mdFiles) {
-		for _, mdFile := range mdFiles {
-			select {
-			case <-c.t.C:
-				fName := filepath.Base(mdFile)
-				searchPictureName(mdFile)
-				fName = replaceExtension(fName, ".md", ".html")
-				log.Println("new fname:", fName)
-				htmlOut := fmt.Sprintf("%s/%s", out, fName)
-				err := convertMDToHTML(mdFile, htmlOut)
-				if err != nil {
-					log.Println(err)
-				}
-
-				time.Sleep(time.Second * 1)
-				fName = replaceExtension(fName, ".html", ".pdf")
-				log.Println("new fname:", fName)
-				pdfOut := fmt.Sprintf("%s/%s", out, fName)
-				err = convertHTMLToPDF(htmlOut, pdfOut)
-
-				n++
-				log.Println("file processing finished, filename:", fName)
-				log.Println("----------------------------------")
+	for _, mdFile := range mdFiles {
+		select {
+		case <-c.t.C:
+			log.Println("tick converter")
+			//fName := filepath.Base(mdFile)
+			fName := mdFile
+			c.srv.SearchPictureName(mdFile)
+			fName = c.srv.ReplaceExtension(fName, ".md", ".html")
+			log.Println("new fname:", fName)
+			mdFile := fmt.Sprintf("%s%s", out, mdFile)
+			htmlOut := fmt.Sprintf("%s%s", out, fName)
+			log.Println("fileNames:", mdFile, htmlOut)
+			err := c.srv.ConvertMDToHTML(mdFile, htmlOut)
+			if err != nil {
+				log.Println(err)
 			}
+			time.Sleep(time.Millisecond * 350)
+			fName = c.srv.ReplaceExtension(fName, ".html", ".pdf")
+			log.Println("new fname:", fName)
+			pdfOut := fmt.Sprintf("%s/%s", out, fName)
+			err = c.srv.ConvertHTMLToPDF(htmlOut, pdfOut)
+
+			n++
+			log.Println("file processing finished, filename:", fName)
+			log.Println("----------------------------------")
 		}
 	}
 	log.Println("cron finished work")
@@ -98,115 +103,3 @@ func (c *Cron) Run(mdFiles []string) {
 //
 //	return nil
 //}
-
-func searchPictureName(path string) {
-	// Открываем файл для чтения и записи
-	f, err := os.OpenFile(path, os.O_RDWR, 0666)
-	if err != nil {
-		log.Println("Error opening file:", err)
-		return
-	}
-
-	defer func() {
-		err := f.Close() // Закрываем файл в конце
-		if err != nil {
-			log.Println("Error closing file:", err)
-		}
-	}()
-
-	// Сканер для построчного чтения файла
-	scanner := bufio.NewScanner(f)
-
-	// Мы будем использовать буфер для сохранения строк, чтобы потом их переписать с добавленным текстом
-	var lines []string
-
-	// Читаем файл построчно
-	for scanner.Scan() {
-		line := scanner.Text()
-
-		// Если строка содержит картинку (например, "Screenshot")
-		if strings.Contains(line, ".png") {
-			//log.Println("picture name:", line)
-
-			if strings.Count(line, ".png") >= 2 {
-				log.Println("already contains")
-				return
-			}
-
-			fname := extractFileName(line)
-			cfn := completeFileName(fname)
-			line += cfn
-			log.Println("picture name:", cfn)
-		}
-		// Добавляем обработанную строку в буфер
-		lines = append(lines, line)
-	}
-
-	// Проверяем на ошибки при сканировании
-	if err := scanner.Err(); err != nil {
-		log.Println("Error scanning file:", err)
-		return
-	}
-
-	_, err = f.Seek(0, io.SeekStart)
-	if err != nil {
-		log.Println("Error seeking to start:", err)
-		return
-	}
-
-	for _, line := range lines {
-		_, err := f.WriteString(line + "\n") // Добавляем новую строку с концом
-		if err != nil {
-			log.Println("Error writing to file:", err)
-			return
-		}
-	}
-
-	log.Println("File updated successfully.")
-}
-
-func convertMDToHTML(inputFile, outputFile string) error {
-	cmd := exec.Command("pandoc", inputFile, "-o", outputFile)
-
-	output, err := cmd.CombinedOutput()
-
-	if err != nil {
-		return fmt.Errorf("Error executing pandoc: %v\nOutput: %s", err, output)
-	}
-
-	fmt.Println("Conversion completed successfully.")
-	return nil
-}
-
-func convertHTMLToPDF(inputFile, outputFile string) error {
-	cmd := exec.Command("wkhtmltopdf", "--enable-local-file-access", "--encoding", "UTF-8", inputFile, outputFile)
-
-	output, err := cmd.CombinedOutput()
-
-	if err != nil {
-		return fmt.Errorf("Error executing wkhtmltopdf: %v\nOutput: %s", err, output)
-	}
-
-	fmt.Println("HTML to PDF conversion completed successfully.")
-	return nil
-}
-
-func extractFileName(s string) string {
-	result := ""
-	for _, val := range s {
-		if string(val) != "!" && string(val) != "[" && string(val) != "]" {
-			result += string(val)
-		}
-	}
-	return result
-}
-
-func completeFileName(s string) string {
-	return fmt.Sprintf("(./%s)", s)
-}
-
-func replaceExtension(s string, oldext, newext string) string {
-	// text.md --> text.html
-	return strings.Replace(s, oldext, newext, -1)
-
-}

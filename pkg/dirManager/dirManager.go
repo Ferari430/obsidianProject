@@ -18,6 +18,7 @@ type DirManager struct {
 func NewDirManager(dirrectories []string) *DirManager {
 	return &DirManager{Alldir: dirrectories}
 }
+
 func (dm *DirManager) Check() {
 	_, ok := dm.checkAllDirExists(dm.Alldir)
 
