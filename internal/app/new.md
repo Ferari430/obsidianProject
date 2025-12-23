@@ -1,1 +1,0 @@
-tut kakoy to tekst

@@ -30,7 +30,7 @@ func NewApp() *app {
 	cronConverter := cronConverter.NewCron(t1, srv1)
 
 	t2 := time.NewTicker(time.Second * 10) // cronChecker
-	root := "/home/user/programmin/obsidianProject/data/obsidianPro	ject/"
+	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
 	ch := make(chan struct{})
 	srv2 := checkService.NewCheckService(root, postgres)
 	cronChecker := cronChecker.NewCronChecker(t2, srv2, ch)

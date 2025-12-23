@@ -5,6 +5,7 @@ import (
 	"log"
 	"time"
 
+	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/services/convertService"
 )
 
@@ -19,43 +20,50 @@ func NewCron(ticker *time.Ticker, s *convertService.ConvertService) *Cron {
 	return cron
 }
 
-func (cron *Cron) GetFiles() []string {
+func (cron *Cron) GetFiles() []*models.File {
 	return cron.srv.GetFiles()
 }
 
 // TODO: доработать, логика с for не нравится
 func (c *Cron) Run() {
 	log.Println("start cron converter")
-	n := 0
 	time.Sleep(time.Second)
-	mdFiles := c.GetFiles()
-	log.Println("mdFiles:", mdFiles)
 	out := "/home/user/programmin/obsidianProject/data/obsidianProject/"
-	for _, mdFile := range mdFiles {
+	for {
 		select {
 		case <-c.t.C:
 			log.Println("tick converter")
-			//fName := filepath.Base(mdFile)
-			fName := mdFile
-			c.srv.SearchPictureName(mdFile)
-			fName = c.srv.ReplaceExtension(fName, ".md", ".html")
-			log.Println("new fname:", fName)
-			mdFile := fmt.Sprintf("%s%s", out, mdFile)
-			htmlOut := fmt.Sprintf("%s%s", out, fName)
-			log.Println("fileNames:", mdFile, htmlOut)
-			err := c.srv.ConvertMDToHTML(mdFile, htmlOut)
-			if err != nil {
-				log.Println(err)
-			}
-			time.Sleep(time.Millisecond * 350)
-			fName = c.srv.ReplaceExtension(fName, ".html", ".pdf")
-			log.Println("new fname:", fName)
-			pdfOut := fmt.Sprintf("%s/%s", out, fName)
-			err = c.srv.ConvertHTMLToPDF(htmlOut, pdfOut)
+			mdFiles := c.srv.GetFiles()
 
-			n++
-			log.Println("file processing finished, filename:", fName)
-			log.Println("----------------------------------")
+			for _, mdFile := range mdFiles {
+				log.Println("mdFile in coverter:", mdFile.FPath, mdFile.IsPdf)
+				if !mdFile.IsPdf {
+					fName := mdFile.FPath
+					c.srv.SearchPictureName(mdFile.FPath)
+					fName = c.srv.ReplaceExtension(fName, ".md", ".html")
+					log.Println("new fname:", fName)
+					path := fmt.Sprintf("%s%s", out, mdFile.FPath)
+					htmlOut := fmt.Sprintf("%s%s", out, fName)
+					log.Println("fileNames:", path, htmlOut)
+					err := c.srv.ConvertMDToHTML(path, htmlOut)
+					if err != nil {
+						log.Println(err)
+					}
+					time.Sleep(time.Millisecond * 350)
+					fName = c.srv.ReplaceExtension(fName, ".html", ".pdf")
+					log.Println("new fname:", fName)
+					pdfOut := fmt.Sprintf("%s/%s", out, fName)
+					err = c.srv.ConvertHTMLToPDF(htmlOut, pdfOut)
+					if err != nil {
+						log.Println(err)
+						return
+					}
+					mdFile.IsPdf = true
+					log.Println("file processing finished, filename:", fName)
+					log.Println("----------------------------------")
+				}
+				log.Println("mdFile already exists in pdf")
+			}
 		}
 	}
 	log.Println("cron finished work")

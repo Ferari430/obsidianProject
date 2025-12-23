@@ -9,6 +9,7 @@ import (
 	"os/exec"
 	"strings"
 
+	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
 )
 
@@ -22,7 +23,7 @@ func NewConvertService(db *inm.Postgres) *ConvertService {
 	}
 }
 
-func (c *ConvertService) GetFiles() []string {
+func (c *ConvertService) GetFiles() []*models.File {
 	arr := c.db.Get()
 	log.Printf("Крон Конвертер получил  %d файлов", len(arr))
 	return arr

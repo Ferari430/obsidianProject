@@ -6,6 +6,7 @@ import (
 	"slices"
 	"strings"
 
+	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
 )
 
@@ -17,7 +18,13 @@ type Service struct {
 }
 
 func (s *Service) Add(files []string) error {
-	err := s.db.Add(files)
+	sliceFiles := make([]*models.File, 0)
+
+	for _, file := range files {
+		sliceFiles = append(sliceFiles, models.NewFile(file))
+	}
+
+	err := s.db.Add(sliceFiles)
 	if err != nil {
 		log.Println("Error adding files:", err)
 	}
