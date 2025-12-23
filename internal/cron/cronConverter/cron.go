@@ -20,8 +20,8 @@ func NewCron(ticker *time.Ticker, s *convertService.ConvertService) *Cron {
 	return cron
 }
 
-func (cron *Cron) GetFiles() []*models.File {
-	return cron.srv.GetFiles()
+func (c *Cron) GetFiles() []*models.File {
+	return c.srv.GetFiles()
 }
 
 // TODO: доработать, логика с for не нравится
@@ -34,7 +34,7 @@ func (c *Cron) Run() {
 		case <-c.t.C:
 			log.Println("tick converter")
 			mdFiles := c.srv.GetFiles()
-
+			log.Println("len mdFiles: ", len(mdFiles))
 			for _, mdFile := range mdFiles {
 				log.Println("mdFile in coverter:", mdFile.FPath, mdFile.IsPdf)
 				if !mdFile.IsPdf {
@@ -66,7 +66,6 @@ func (c *Cron) Run() {
 			}
 		}
 	}
-	log.Println("cron finished work")
 }
 
 //func OpenMDFile(path string) (*os.File, error) {

@@ -25,6 +25,10 @@ func NewConvertService(db *inm.Postgres) *ConvertService {
 
 func (c *ConvertService) GetFiles() []*models.File {
 	arr := c.db.Get()
+	if len(arr) == 0 {
+		log.Println("no new file for convertService")
+		return nil
+	}
 	log.Printf("Крон Конвертер получил  %d файлов", len(arr))
 	return arr
 }

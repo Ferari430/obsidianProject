@@ -24,11 +24,17 @@ func NewCronChecker(ticker *time.Ticker, srv *checkService.Service, ch chan stru
 }
 
 func (c *CronChecker) Run() {
+	//files, err := c.s.RestorePDFFiles("pdf")
+	//if err != nil {
+	//	log.Println(err)
+	//}
+	c.s.RestorePDFFiles()
+
 	log.Println("start cron checker")
 	for {
 		select {
 		case <-c.t.C:
-			_, err := c.s.CollectNewMdFiles()
+			err := c.s.CollectNewMdFiles()
 			if err != nil {
 				log.Println("Error collecting new files:", err)
 			}

@@ -5,12 +5,6 @@ import (
 	"os"
 )
 
-const (
-	mddir   = "/home/user/programmin/obsidianTestEnv/data/obsidianProject/mddir"
-	htmldir = "/home/user/programmin/obsidianTestEnv/data/obsidianProject/htmldir"
-	pdfdir  = "/home/user/programmin/obsidianTestEnv/data/obsidianProject/pdfdir"
-)
-
 type DirManager struct {
 	Alldir []string
 }

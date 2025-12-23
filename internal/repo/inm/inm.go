@@ -2,28 +2,42 @@ package inm
 
 import (
 	"log"
-	"slices"
+	"os"
 
 	"github.com/Ferari430/obsidianProject/internal/models"
 )
 
 type Postgres struct {
-	table []*models.File
-	arr   []*models.File
+	table          []*models.File
+	converterFiles []*models.File
 }
 
 func NewPostgres() *Postgres {
 	arr := make([]*models.File, 0)
 	arr1 := make([]*models.File, 0)
 	return &Postgres{table: arr,
-		arr: arr1,
+		converterFiles: arr1,
 	}
 }
 
-func (s *Postgres) Add(collectedMdFiles []*models.File) error {
+func (s *Postgres) Add(collectedMdFiles []os.DirEntry) error {
 	for _, f := range collectedMdFiles {
-		if !slices.Contains(s.table, f) {
-			s.table = append(s.table, f)
+		if existingFile, ok := s.checkHandledFile(f); !ok {
+			//если новый файл
+			modifyedAt, err := f.Info()
+			if err != nil {
+				return err
+			}
+
+			newFile := models.NewFile(f.Name(), modifyedAt.ModTime())
+			s.table = append(s.table, newFile)
+			s.converterFiles = append(s.converterFiles, newFile)
+		} else {
+			//если нашли файл
+			log.Println("file already in db")
+			if !s.checkModifyFile(f, existingFile) {
+				s.converterFiles = append(s.converterFiles, existingFile)
+			}
 		}
 	}
 
@@ -33,5 +47,48 @@ func (s *Postgres) Add(collectedMdFiles []*models.File) error {
 }
 
 func (s *Postgres) Get() []*models.File {
-	return s.table
+	defer func() {
+		s.converterFiles = nil
+	}()
+
+	return s.converterFiles
+}
+
+func (s *Postgres) checkModifyFile(f os.DirEntry, existingFile *models.File) bool {
+	op := "postgres.CheckModifyFile"
+	info, err := f.Info()
+	if err != nil {
+		log.Println(op, err)
+		return false
+	}
+
+	return info.ModTime() != existingFile.GetTimeMod()
+}
+
+func (s *Postgres) checkHandledFile(f os.DirEntry) (*models.File, bool) {
+	for _, file := range s.table {
+		if file.FPath == f.Name() {
+			return file, true
+		}
+	}
+
+	return nil, false
+}
+
+func (s *Postgres) AddPDFFiles(pdfFiles []os.DirEntry) error {
+	//fiels already in md extinsion
+	for _, f := range pdfFiles {
+		info, err := f.Info()
+		if err != nil {
+			return err
+		}
+
+		newFile := &models.File{
+			FPath:      f.Name(),
+			IsPdf:      true,
+			ModifyedAt: info.ModTime(),
+		}
+		s.table = append(s.table, newFile)
+	}
+	return nil
 }

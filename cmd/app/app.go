@@ -27,18 +27,18 @@ func NewApp() *app {
 
 	t1 := time.NewTicker(time.Second * 20) // cronConverter
 	srv1 := convertService.NewConvertService(postgres)
-	cronConverter := cronConverter.NewCron(t1, srv1)
+	converter := cronConverter.NewCron(t1, srv1)
 
 	t2 := time.NewTicker(time.Second * 10) // cronChecker
 	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
 	ch := make(chan struct{})
 	srv2 := checkService.NewCheckService(root, postgres)
-	cronChecker := cronChecker.NewCronChecker(t2, srv2, ch)
-	app := &app{
-		cronConverter: cronConverter,
-		cronChecker:   cronChecker,
+	checker := cronChecker.NewCronChecker(t2, srv2, ch)
+	application := &app{
+		cronConverter: converter,
+		cronChecker:   checker,
 	}
-	return app
+	return application
 }
 
 func (a *app) Start() {
