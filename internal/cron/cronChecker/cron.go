@@ -24,10 +24,7 @@ func NewCronChecker(ticker *time.Ticker, srv *checkService.Service, ch chan stru
 }
 
 func (c *CronChecker) Run() {
-	//files, err := c.s.RestorePDFFiles("pdf")
-	//if err != nil {
-	//	log.Println(err)
-	//}
+
 	c.s.RestorePDFFiles()
 
 	log.Println("start cron checker")

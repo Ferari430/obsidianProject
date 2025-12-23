@@ -21,19 +21,19 @@ func NewPostgres() *Postgres {
 }
 
 func (s *Postgres) Add(collectedMdFiles []os.DirEntry) error {
+	s.converterFiles = make([]*models.File, 0)
+
 	for _, f := range collectedMdFiles {
 		if existingFile, ok := s.checkHandledFile(f); !ok {
-			//если новый файл
-			modifyedAt, err := f.Info()
+			modifiedAt, err := f.Info()
 			if err != nil {
 				return err
 			}
 
-			newFile := models.NewFile(f.Name(), modifyedAt.ModTime())
+			newFile := models.NewFile(f.Name(), modifiedAt.ModTime())
 			s.table = append(s.table, newFile)
 			s.converterFiles = append(s.converterFiles, newFile)
 		} else {
-			//если нашли файл
 			log.Println("file already in db")
 			if !s.checkModifyFile(f, existingFile) {
 				s.converterFiles = append(s.converterFiles, existingFile)
@@ -47,10 +47,7 @@ func (s *Postgres) Add(collectedMdFiles []os.DirEntry) error {
 }
 
 func (s *Postgres) Get() []*models.File {
-	defer func() {
-		s.converterFiles = nil
-	}()
-
+	log.Println("len converterFiles: ", len(s.converterFiles))
 	return s.converterFiles
 }
 
@@ -76,7 +73,6 @@ func (s *Postgres) checkHandledFile(f os.DirEntry) (*models.File, bool) {
 }
 
 func (s *Postgres) AddPDFFiles(pdfFiles []os.DirEntry) error {
-	//fiels already in md extinsion
 	for _, f := range pdfFiles {
 		info, err := f.Info()
 		if err != nil {
@@ -91,4 +87,10 @@ func (s *Postgres) AddPDFFiles(pdfFiles []os.DirEntry) error {
 		s.table = append(s.table, newFile)
 	}
 	return nil
+}
+
+func (s *Postgres) getAllFIlesName() {
+	for _, f := range s.table {
+		log.Printf("in table %s", f.FPath)
+	}
 }

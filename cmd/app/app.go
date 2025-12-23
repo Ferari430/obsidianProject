@@ -42,10 +42,6 @@ func NewApp() *app {
 }
 
 func (a *app) Start() {
-	//mdFiles := []string{
-	//	"/home/user/programmin/obsidianProject/data/obsidianProject/testmd.md",
-	//	"/home/user/programmin/obsidianProject/data/obsidianProject/zagolovok.md",
-	//}
 
 	allDir := []string{mddir, htmldir, pdfdir}
 	dm := dirManager.NewDirManager(allDir)
