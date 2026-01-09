@@ -1,14 +1,22 @@
 package app
 
 import (
+	"log"
+	"os"
 	"time"
 
+	"github.com/Ferari430/obsidianProject/internal/config"
 	"github.com/Ferari430/obsidianProject/internal/cron/cronChecker"
 	"github.com/Ferari430/obsidianProject/internal/cron/cronConverter"
+	"github.com/Ferari430/obsidianProject/internal/cron/cronSender"
+	"github.com/Ferari430/obsidianProject/internal/handlers/tgHandler"
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
 	"github.com/Ferari430/obsidianProject/internal/services/checkService"
 	"github.com/Ferari430/obsidianProject/internal/services/convertService"
+	"github.com/Ferari430/obsidianProject/internal/services/sendService"
 	"github.com/Ferari430/obsidianProject/pkg/dirManager"
+	"github.com/Ferari430/obsidianProject/pkg/logger"
+	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
 )
 
 const (
@@ -17,32 +25,52 @@ const (
 	pdfdir  = "/home/user/programmin/obsidianProject/data/obsidianProject/pdfdir"
 )
 
-type app struct {
+type App struct {
 	cronConverter *cronConverter.Cron
 	cronChecker   *cronChecker.CronChecker
+	cronSender    *cronSender.CronSender
 }
 
-func NewApp() *app {
+func NewApp() *App {
 	postgres := inm.NewPostgres()
+	l := logger.NewLogger()
+
+	cfg := config.LoadConfig()
+
+	bot, err := initTg(cfg.Tg)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	t1 := time.NewTicker(time.Second * 20) // cronConverter
-	srv1 := convertService.NewConvertService(postgres)
-	converter := cronConverter.NewCron(t1, srv1)
+	srv1 := convertService.NewConvertService(postgres, l)
+	converter := cronConverter.NewCron(t1, srv1, l)
 
 	t2 := time.NewTicker(time.Second * 10) // cronChecker
 	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
 	ch := make(chan struct{})
-	srv2 := checkService.NewCheckService(root, postgres)
-	checker := cronChecker.NewCronChecker(t2, srv2, ch)
-	application := &app{
+	srv2 := checkService.NewCheckService(root, postgres, l)
+	checker := cronChecker.NewCronChecker(t2, srv2, ch, l)
+
+	t3 := time.NewTicker(time.Second * 5)
+
+	sendS := sendService.NewSendService(postgres)
+	tgh := tgHandler.TgHandler{Bot: bot,
+		SendService: sendS,
+	}
+	cS := cronSender.NewCronSender(tgh, t3)
+
+	application := &App{
 		cronConverter: converter,
 		cronChecker:   checker,
+		cronSender:    cS,
 	}
 	return application
 }
 
-func (a *app) Start() {
+func (a *App) Start() {
 
+	go a.cronSender.Start()
 	allDir := []string{mddir, htmldir, pdfdir}
 	dm := dirManager.NewDirManager(allDir)
 	dm.Check()
@@ -50,4 +78,29 @@ func (a *app) Start() {
 	go a.cronChecker.Run()
 	time.Sleep(time.Second * 2)
 	go a.cronConverter.Run()
+
+}
+
+func initTg(cfg config.TgBotCfg) (*tg.BotAPI, error) {
+	token := os.Getenv("TOKEN")
+
+	log.Println(token)
+	bot, err := tg.NewBotAPI(token)
+	if err != nil {
+		log.Println(err)
+		return nil, err
+	}
+
+	log.Printf("Authorized on account %s", bot.Self.UserName)
+	//
+	//u := tg.NewUpdate(0)
+	//u.Timeout = 60
+	//
+	//updates := bot.GetUpdatesChan(u)
+	//
+	//for update := range updates {
+	//	log.Println(update.Message.Text)
+	//}
+
+	return bot, nil
 }

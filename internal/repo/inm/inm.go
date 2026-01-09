@@ -1,6 +1,7 @@
 package inm
 
 import (
+	"errors"
 	"log"
 	"os"
 
@@ -8,16 +9,14 @@ import (
 )
 
 type Postgres struct {
-	table          []*models.File
-	converterFiles []*models.File
+	table          []*models.File // уже обработанные файлы
+	converterFiles []*models.File // файлы для конвертации
 }
 
 func NewPostgres() *Postgres {
 	arr := make([]*models.File, 0)
-	arr1 := make([]*models.File, 0)
-	return &Postgres{table: arr,
-		converterFiles: arr1,
-	}
+
+	return &Postgres{table: arr}
 }
 
 func (s *Postgres) Add(collectedMdFiles []os.DirEntry) error {
@@ -25,21 +24,28 @@ func (s *Postgres) Add(collectedMdFiles []os.DirEntry) error {
 
 	for _, f := range collectedMdFiles {
 		if existingFile, ok := s.checkHandledFile(f); !ok {
-			modifiedAt, err := f.Info()
+			fileInfo, err := f.Info()
 			if err != nil {
 				return err
 			}
 
-			newFile := models.NewFile(f.Name(), modifiedAt.ModTime())
+			newFile := models.NewFile(f.Name(), fileInfo.ModTime())
+			// если нет такого файла то добавляю в оба слайса
 			s.table = append(s.table, newFile)
 			s.converterFiles = append(s.converterFiles, newFile)
 		} else {
 			log.Println("file already in db")
+			//если есть то проверяю не изменен ли файл
+
+			//если время не совпадает то конвертируем
 			if !s.checkModifyFile(f, existingFile) {
+				log.Println("время не совпадает, конвертация файла....", existingFile.FPath)
 				s.converterFiles = append(s.converterFiles, existingFile)
 			}
 		}
 	}
+
+	log.Println("только пдф файлы:", s.GetAllPDFFiles())
 
 	l := len(collectedMdFiles)
 	log.Printf("добавлено %d файлов", l)
@@ -51,6 +57,15 @@ func (s *Postgres) Get() []*models.File {
 	return s.converterFiles
 }
 
+func (s *Postgres) GetConfirmedFiles() ([]*models.File, error) {
+	if s.table == nil || len(s.table) == 0 {
+		return nil, errors.New("there are no confirmed files")
+	}
+
+	log.Println("len confirmed files: ", len(s.table))
+	return s.table, nil
+}
+
 func (s *Postgres) checkModifyFile(f os.DirEntry, existingFile *models.File) bool {
 	op := "postgres.CheckModifyFile"
 	info, err := f.Info()
@@ -59,7 +74,19 @@ func (s *Postgres) checkModifyFile(f os.DirEntry, existingFile *models.File) boo
 		return false
 	}
 
-	return info.ModTime() != existingFile.GetTimeMod()
+	flag := info.ModTime() == existingFile.GetTimeMod()
+
+	//if flag == false {
+	//	log.Println("время не совпадает", "fileInfo", info.ModTime(), "fileInfoDb", existingFile.GetTimeMod())
+	//}
+	//
+	//if flag == true {
+	//	log.Println("время совпадает", "fileInfo", info.ModTime(), "fileInfoDb", existingFile.GetTimeMod())
+	//}
+
+	existingFile.NeedToConvert = true
+
+	return flag
 }
 
 func (s *Postgres) checkHandledFile(f os.DirEntry) (*models.File, bool) {
@@ -93,4 +120,18 @@ func (s *Postgres) getAllFIlesName() {
 	for _, f := range s.table {
 		log.Printf("in table %s", f.FPath)
 	}
+}
+
+func (s *Postgres) GetAllPDFFiles() []*models.File {
+	arr := make([]*models.File, 0)
+	for _, f := range s.table {
+
+		log.Println("file:", f.FPath, f.IsPdf, f.ModifyedAt)
+
+		if f.IsPdf {
+			arr = append(arr, f)
+		}
+	}
+
+	return arr
 }

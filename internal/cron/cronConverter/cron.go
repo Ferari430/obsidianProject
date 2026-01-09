@@ -7,16 +7,20 @@ import (
 
 	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/services/convertService"
+	"github.com/Ferari430/obsidianProject/pkg/logger"
 )
 
 type Cron struct {
-	t   *time.Ticker
-	srv *convertService.ConvertService
+	t      *time.Ticker
+	srv    *convertService.ConvertService
+	logger *logger.Logger
 }
 
-func NewCron(ticker *time.Ticker, s *convertService.ConvertService) *Cron {
+func NewCron(ticker *time.Ticker, s *convertService.ConvertService, l *logger.Logger) *Cron {
 	cron := &Cron{t: ticker,
-		srv: s}
+		srv:    s,
+		logger: l,
+	}
 	return cron
 }
 
@@ -37,7 +41,8 @@ func (c *Cron) Run() {
 			log.Println("len mdFiles: ", len(mdFiles))
 			for _, mdFile := range mdFiles {
 				log.Println("mdFile in coverter:", mdFile.FPath, mdFile.IsPdf)
-				if !mdFile.IsPdf {
+				if !mdFile.IsPdf || mdFile.NeedToConvert {
+					log.Println("конвертация", mdFile.FPath)
 					fName := mdFile.FPath
 					c.srv.SearchPictureName(mdFile.FPath)
 					fName = c.srv.ReplaceExtension(fName, ".md", ".html")
@@ -67,46 +72,3 @@ func (c *Cron) Run() {
 		}
 	}
 }
-
-//func OpenMDFile(path string) (*os.File, error) {
-//	f, err := os.OpenFile(path, os.O_RDONLY, 0666)
-//	if err != nil {
-//		return nil, err
-//	}
-//	defer f.Close()
-//
-//	fileInfo, err := f.Stat()
-//	if err != nil {
-//		return nil, err
-//	}
-//
-//	buf := make([]byte, fileInfo.Size())
-//
-//	_, err = f.Read(buf)
-//	if err != nil {
-//		return nil, err
-//	}
-//
-//	log.Println(string(buf))
-//	return f, nil
-//}
-//
-//func convert(inputFile string) error {
-//	OutputFile := "output.pdf"
-//	cmd := exec.Command("pandoc", inputFile, "-o", OutputFile,
-//		"--pdf-engine=xelatex",
-//		"-V", "mainfont=DejaVu Sans",
-//		"-V", "monofont=DejaVu Sans Mono")
-//
-//	output, err := cmd.CombinedOutput()
-//	if err != nil {
-//		log.Println(string(output))
-//		return err
-//	}
-//
-//	filename := strings.Split(inputFile, "/")
-//	name := filename[len(filename)-1]
-//	log.Printf("convertation from %s to %s successfully", name, OutputFile)
-//
-//	return nil
-//}

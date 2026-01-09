@@ -1,32 +1,38 @@
 package convertService
 
+import "C"
 import (
 	"bufio"
 	"fmt"
 	"io"
 	"log"
+	"log/slog"
 	"os"
 	"os/exec"
 	"strings"
 
 	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
+	"github.com/Ferari430/obsidianProject/pkg/logger"
 )
 
 type ConvertService struct {
-	db *inm.Postgres
+	db     *inm.Postgres
+	logger *logger.Logger
 }
 
-func NewConvertService(db *inm.Postgres) *ConvertService {
+func NewConvertService(db *inm.Postgres, l *logger.Logger) *ConvertService {
 	return &ConvertService{
-		db: db,
+		db:     db,
+		logger: l,
 	}
 }
 
 func (c *ConvertService) GetFiles() []*models.File {
+	op := "convertService.GetFiles"
 	arr := c.db.Get()
 	if len(arr) == 0 {
-		log.Println("no new file for convertService")
+		c.logger.Debug("no new file for convertService", slog.String("op", op))
 		return nil
 	}
 	log.Printf("Крон Конвертер получил  %d файлов", len(arr))
@@ -99,7 +105,7 @@ func (c *ConvertService) SearchPictureName(p string) {
 }
 
 func (c *ConvertService) ConvertMDToHTML(inputFile, outputFile string) error {
-	cmd := exec.Command("pandoc", inputFile, "-o", outputFile)
+	cmd := exec.Command("pandoc", inputFile, "-o", outputFile, "--from=markdown+hard_line_breaks")
 
 	output, err := cmd.CombinedOutput()
 
@@ -131,6 +137,7 @@ func extractFileName(s string) string {
 			result += string(val)
 		}
 	}
+	log.Println("no new file for convertService")
 	return result
 }
 

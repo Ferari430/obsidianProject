@@ -7,17 +7,20 @@ import (
 	"strings"
 
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
+	"github.com/Ferari430/obsidianProject/pkg/logger"
 )
 
 type Service struct {
-	root string //dir
-	db   *inm.Postgres
+	root   string //dir
+	db     *inm.Postgres
+	logger *logger.Logger
 }
 
-func NewCheckService(root string, db *inm.Postgres) *Service {
+func NewCheckService(root string, db *inm.Postgres, l *logger.Logger) *Service {
 	return &Service{
-		root: root,
-		db:   db,
+		root:   root,
+		db:     db,
+		logger: l,
 	}
 }
 

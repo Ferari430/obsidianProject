@@ -1,18 +1,24 @@
 package models
 
-import "time"
+import (
+	"os"
+	"time"
+)
 
 type File struct {
-	FPath      string
-	IsPdf      bool
-	ModifyedAt time.Time
+	FileInstans   *os.File
+	FPath         string
+	IsPdf         bool
+	ModifyedAt    time.Time
+	NeedToConvert bool
 }
 
 func NewFile(path string, t time.Time) *File {
 	return &File{
-		FPath:      path,
-		IsPdf:      false,
-		ModifyedAt: t,
+		FPath:         path,
+		IsPdf:         false,
+		ModifyedAt:    t,
+		NeedToConvert: false,
 	}
 }
 
