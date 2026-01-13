@@ -29,6 +29,7 @@ func NewCronChecker(ticker *time.Ticker, srv *checkService.Service, ch chan stru
 
 func (c *CronChecker) Run() {
 	op := "cronChecker.Run"
+
 	err := c.s.RestorePDFFiles()
 	if err != nil {
 		c.logger.Debug("cant restore pdf files", slog.String("op", op), slog.String("err", err.Error()))
@@ -41,7 +42,7 @@ func (c *CronChecker) Run() {
 		case <-c.t.C:
 			err := c.s.CollectNewMdFiles()
 			if err != nil {
-				log.Println("Error collecting new files:", err)
+				log.Println("Error collecting new files:", err, op)
 			}
 
 		case <-c.signal:

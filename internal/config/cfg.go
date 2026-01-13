@@ -32,7 +32,7 @@ func NewConfig() (*Config, error) {
 		return nil, err
 
 	}
-
+	
 	return &Config{
 		Tg: TgBotCfg{Token: os.Getenv("TOKEN")},
 	}, nil

@@ -3,6 +3,8 @@ package cronSender
 import (
 	"fmt"
 	"log"
+	"math/rand"
+	"sync"
 	"time"
 
 	"github.com/Ferari430/obsidianProject/internal/handlers/tgHandler"
@@ -19,26 +21,56 @@ func NewCronSender(h tgHandler.TgHandler, ticker *time.Ticker) *CronSender {
 
 }
 
-func (s *CronSender) Start() {
+func (s *CronSender) SendAllFiles() {
 	log.Println("start cron sender")
-	i := 0
 	for {
 		select {
 		case <-s.t.C:
+			log.Println("sending files:...")
 			arr := make([]string, 0)
-			f, err := s.handler.SendService.Db.GetConfirmedFiles()
+			files, err := s.handler.SendService.Db.GetConfirmedFiles()
 			if err != nil {
 				log.Println(err)
 			}
+			wg := sync.WaitGroup{}
+			wg.Add(len(files))
 
-			for _, file := range f {
-				arr = append(arr, file.FPath)
+			for _, file := range files {
+
+				go func() {
+					defer wg.Done()
+					str := fmt.Sprintf("Reqest number i = %d. Values in storage: %v", rand.Intn(9), arr)
+					s.handler.SendMessage(str)
+					s.handler.SendPDF(file)
+
+				}()
+			}
+			log.Println("sendind files confirmed")
+			wg.Wait()
+		}
+	}
+}
+
+func (s *CronSender) Start() {
+	log.Println("start cron sender")
+	for {
+		select {
+		case <-s.t.C:
+			log.Println("sending file:...")
+			file, err := s.handler.SendService.GetRandomPdf()
+			if err != nil {
+				log.Fatal(err)
 			}
 
-			str := fmt.Sprintf("Reqest number i = %d. Values in storage: %v", i, arr)
-			s.handler.SendMessage(str)
-			i++
+			str := fmt.Sprint("New File:")
+			err = s.handler.SendMessage(str)
+			if err != nil {
+				log.Fatal(err)
+			}
 
+			s.handler.SendPDF(file)
+
+			log.Println("sendind files confirmed")
 		}
 	}
 }

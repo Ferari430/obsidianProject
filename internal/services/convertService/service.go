@@ -9,10 +9,12 @@ import (
 	"log/slog"
 	"os"
 	"os/exec"
+	"path/filepath"
 	"strings"
 
 	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
+	"github.com/Ferari430/obsidianProject/pkg/dirManager"
 	"github.com/Ferari430/obsidianProject/pkg/logger"
 )
 
@@ -35,8 +37,17 @@ func (c *ConvertService) GetFiles() []*models.File {
 		c.logger.Debug("no new file for convertService", slog.String("op", op))
 		return nil
 	}
+
 	log.Printf("Крон Конвертер получил  %d файлов", len(arr))
 	return arr
+}
+
+func (c *ConvertService) RemoveFromConverter(fileName string) error {
+	return c.db.RemoveFromConverter(fileName)
+}
+
+func (c *ConvertService) UpdateFileModifyTime(fileName string) error {
+	return c.db.UpdateFileModifyTime(fileName)
 }
 
 func (c *ConvertService) SearchPictureName(p string) {
@@ -149,4 +160,35 @@ func (c *ConvertService) ReplaceExtension(s string, oldext, newext string) strin
 	// text.md --> text.html
 	return strings.Replace(s, oldext, newext, -1)
 
+}
+
+func (c *ConvertService) SetContentToModel(file *models.File) error {
+	op := "convertService.SetContentToModel"
+	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
+	newFilename := file.FPath
+	a := dirManager.ReplaceExtension(newFilename, ".md", ".pdf")
+	path := filepath.Join(root, a)
+	log.Println("path: ", path)
+	f, err := os.OpenFile(path, os.O_RDWR, 0666)
+
+	defer func() {
+		if err := f.Close(); err != nil {
+			log.Println("Error closing file:", err)
+		}
+	}()
+
+	if err != nil {
+		log.Println(op, err)
+		return err
+	}
+
+	content, err := io.ReadAll(f)
+	if err != nil {
+		log.Println(op, err)
+		return err
+	}
+
+	file.SetPdfContent(content)
+	log.Println("content setted")
+	return nil
 }

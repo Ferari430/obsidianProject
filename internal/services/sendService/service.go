@@ -24,4 +24,14 @@ func (s *SendService) GetFile(message *tg.Message) ([]*models.File, error) {
 	}
 	_ = files
 	return files, nil
+
+}
+
+func (s *SendService) GetRandomPdf() (*models.File, error) {
+	file, err := s.Db.GetRandomFile()
+	if err != nil {
+		return nil, err
+	}
+
+	return file, nil
 }

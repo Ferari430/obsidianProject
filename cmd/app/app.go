@@ -2,7 +2,6 @@ package app
 
 import (
 	"log"
-	"os"
 	"time"
 
 	"github.com/Ferari430/obsidianProject/internal/config"
@@ -42,17 +41,17 @@ func NewApp() *App {
 		log.Fatal(err)
 	}
 
-	t1 := time.NewTicker(time.Second * 20) // cronConverter
+	t1 := time.NewTicker(time.Second * 40) // cronConverter
 	srv1 := convertService.NewConvertService(postgres, l)
 	converter := cronConverter.NewCron(t1, srv1, l)
 
-	t2 := time.NewTicker(time.Second * 10) // cronChecker
+	t2 := time.NewTicker(time.Second * 14) // cronChecker
 	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
 	ch := make(chan struct{})
 	srv2 := checkService.NewCheckService(root, postgres, l)
 	checker := cronChecker.NewCronChecker(t2, srv2, ch, l)
 
-	t3 := time.NewTicker(time.Second * 5)
+	t3 := time.NewTicker(time.Second * 60)
 
 	sendS := sendService.NewSendService(postgres)
 	tgh := tgHandler.TgHandler{Bot: bot,
@@ -69,29 +68,29 @@ func NewApp() *App {
 }
 
 func (a *App) Start() {
-
-	go a.cronSender.Start()
+	//go a.cronSender.SendAllFiles()
 	allDir := []string{mddir, htmldir, pdfdir}
 	dm := dirManager.NewDirManager(allDir)
 	dm.Check()
 
+	go a.cronSender.Start()
+
 	go a.cronChecker.Run()
 	time.Sleep(time.Second * 2)
 	go a.cronConverter.Run()
-
 }
 
 func initTg(cfg config.TgBotCfg) (*tg.BotAPI, error) {
-	token := os.Getenv("TOKEN")
 
-	log.Println(token)
-	bot, err := tg.NewBotAPI(token)
+	bot, err := tg.NewBotAPI(cfg.Token)
 	if err != nil {
+		log.Println("err")
 		log.Println(err)
 		return nil, err
 	}
 
 	log.Printf("Authorized on account %s", bot.Self.UserName)
+
 	//
 	//u := tg.NewUpdate(0)
 	//u.Timeout = 60

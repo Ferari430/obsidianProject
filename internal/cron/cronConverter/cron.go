@@ -7,6 +7,7 @@ import (
 
 	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/services/convertService"
+	"github.com/Ferari430/obsidianProject/pkg"
 	"github.com/Ferari430/obsidianProject/pkg/logger"
 )
 
@@ -63,11 +64,27 @@ func (c *Cron) Run() {
 						log.Println(err)
 						return
 					}
+
 					mdFile.IsPdf = true
+
+					err = pkg.SetContentToModel(mdFile)
+					if err != nil {
+						return
+					}
+
 					log.Println("file processing finished, filename:", fName)
 					log.Println("----------------------------------")
+
+					// Обновляем время модификации и флаг конвертации
+					err = c.srv.UpdateFileModifyTime(mdFile.FPath)
+					if err != nil {
+						log.Println(err)
+					}
+
+					// Удаляем обработанный файл из очереди конвертации
+					c.srv.RemoveFromConverter(mdFile.FPath)
+				} else {
 				}
-				log.Println("mdFile already exists in pdf")
 			}
 		}
 	}

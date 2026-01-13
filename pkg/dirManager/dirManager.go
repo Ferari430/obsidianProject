@@ -3,6 +3,7 @@ package dirManager
 import (
 	"log"
 	"os"
+	"strings"
 )
 
 type DirManager struct {
@@ -64,4 +65,9 @@ func (dm *DirManager) createDir() error {
 		log.Println("dir created", path)
 	}
 	return nil
+}
+
+func ReplaceExtension(fileName string, oldext, newext string) string {
+	// text.md --> text.html
+	return strings.Replace(fileName, oldext, newext, -1)
 }

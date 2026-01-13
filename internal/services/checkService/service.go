@@ -7,6 +7,7 @@ import (
 	"strings"
 
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
+	"github.com/Ferari430/obsidianProject/pkg"
 	"github.com/Ferari430/obsidianProject/pkg/logger"
 )
 
@@ -47,9 +48,20 @@ func (s *Service) RestorePDFFiles() error {
 	}
 
 	log.Println("Restored files:", len(files))
-	if err := s.db.AddPDFFiles(files); err != nil {
-		return err
+	for _, f := range files {
+		content, err := pkg.GetContentFromFile(f.Name())
+		if err != nil {
+			log.Println(op, err)
+			return err
+		}
+
+		err = s.db.AddPDFFile(f, content)
+		if err != nil {
+			log.Println(op, err)
+			return err
+		}
 	}
+
 	return nil
 }
 

@@ -1,17 +1,21 @@
 package models
 
 import (
-	"os"
 	"time"
 )
 
 type File struct {
-	FileInstans   *os.File
 	FPath         string
 	IsPdf         bool
 	ModifyedAt    time.Time
 	NeedToConvert bool
+	PdfContent    []byte
 }
+
+//type Pdf struct {
+//	Name       string
+//	PdfContent []byte
+//}
 
 func NewFile(path string, t time.Time) *File {
 	return &File{
@@ -22,7 +26,14 @@ func NewFile(path string, t time.Time) *File {
 	}
 }
 
-// delete this
 func (f *File) GetTimeMod() time.Time {
 	return f.ModifyedAt
+}
+
+func (f *File) SetPdfContent(content []byte) {
+	f.PdfContent = content
+}
+
+func (f *File) convertFileToPdf(md *File) {
+
 }
