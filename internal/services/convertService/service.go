@@ -1,6 +1,5 @@
 package convertService
 
-import "C"
 import (
 	"bufio"
 	"fmt"
@@ -19,14 +18,22 @@ import (
 )
 
 type ConvertService struct {
-	db     *inm.Postgres
-	logger *logger.Logger
+	db              *inm.Postgres
+	logger          *logger.Logger
+	Path            string
+	Sep             string
+	PandocPath      string
+	WkhtmltopdfPath string
 }
 
-func NewConvertService(db *inm.Postgres, l *logger.Logger) *ConvertService {
+func NewConvertService(p, sep, pandocPath, wkhtmltopdf string, db *inm.Postgres, l *logger.Logger) *ConvertService {
 	return &ConvertService{
-		db:     db,
-		logger: l,
+		db:              db,
+		logger:          l,
+		Path:            p,
+		Sep:             sep,
+		PandocPath:      pandocPath,
+		WkhtmltopdfPath: wkhtmltopdf,
 	}
 }
 
@@ -50,8 +57,8 @@ func (c *ConvertService) UpdateFileModifyTime(fileName string) error {
 	return c.db.UpdateFileModifyTime(fileName)
 }
 
-func (c *ConvertService) SearchPictureName(p string) {
-	path := "/home/user/programmin/obsidianProject/data/obsidianProject/" + p
+func (c *ConvertService) SearchPictureName(path string) {
+
 	// Открываем файл для чтения и записи
 	f, err := os.OpenFile(path, os.O_RDWR, 0666)
 	if err != nil {
@@ -116,7 +123,7 @@ func (c *ConvertService) SearchPictureName(p string) {
 }
 
 func (c *ConvertService) ConvertMDToHTML(inputFile, outputFile string) error {
-	cmd := exec.Command("pandoc", inputFile, "-o", outputFile, "--from=markdown+hard_line_breaks")
+	cmd := exec.Command(c.PandocPath, inputFile, "-o", outputFile, "--from=markdown+hard_line_breaks")
 
 	output, err := cmd.CombinedOutput()
 
@@ -128,8 +135,38 @@ func (c *ConvertService) ConvertMDToHTML(inputFile, outputFile string) error {
 	return nil
 }
 
+func (c *ConvertService) prepareFilePath(fileName string) {
+
+}
+
+func (c *ConvertService) ConvertMdToPDF(fileName string) {
+	op := "convertService.convertMdToPDF"
+	md, html, pdf := c.getAbsPath(fileName)
+
+	c.SearchPictureName(md)
+	log.Printf("имя для html: %s\nимя для pdf:%s", html, pdf)
+	err := c.ConvertMDToHTML(md, html)
+	if err != nil {
+		c.logger.Error("cant convert md file to html", slog.String("op", op), slog.String("error:", err.Error()))
+	}
+	err = c.ConvertHTMLToPDF(html, pdf)
+	if err != nil {
+		c.logger.Error("cant convert html file to pdf", slog.String("op", op), slog.String("error:", err.Error()))
+	}
+
+}
+
+func (c *ConvertService) getAbsPath(fileName string) (string, string, string) {
+	absFileName := c.Path + c.Sep + fileName
+	log.Printf("из имени %s сделали %s путь", fileName, absFileName)
+	html := c.ReplaceExtension(absFileName, ".md", ".html")
+	pdf := c.ReplaceExtension(absFileName, ".md", ".pdf")
+
+	return absFileName, html, pdf
+}
+
 func (c *ConvertService) ConvertHTMLToPDF(inputFile, outputFile string) error {
-	cmd := exec.Command("wkhtmltopdf", "--enable-local-file-access", "--encoding", "UTF-8", inputFile, outputFile)
+	cmd := exec.Command(c.WkhtmltopdfPath, "--enable-local-file-access", "--encoding", "UTF-8", inputFile, outputFile)
 
 	output, err := cmd.CombinedOutput()
 
@@ -156,18 +193,16 @@ func completeFileName(s string) string {
 	return fmt.Sprintf("(./%s)", s)
 }
 
-func (c *ConvertService) ReplaceExtension(s string, oldext, newext string) string {
+func (c *ConvertService) ReplaceExtension(s string, oldExt, newExt string) string {
 	// text.md --> text.html
-	return strings.Replace(s, oldext, newext, -1)
-
+	return strings.Replace(s, oldExt, newExt, -1)
 }
 
 func (c *ConvertService) SetContentToModel(file *models.File) error {
 	op := "convertService.SetContentToModel"
-	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
 	newFilename := file.FPath
 	a := dirManager.ReplaceExtension(newFilename, ".md", ".pdf")
-	path := filepath.Join(root, a)
+	path := filepath.Join(c.Path, a)
 	log.Println("path: ", path)
 	f, err := os.OpenFile(path, os.O_RDWR, 0666)
 

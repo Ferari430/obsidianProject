@@ -23,6 +23,7 @@ func NewCheckService(root string, db *inm.Postgres, l *logger.Logger) *Service {
 		db:     db,
 		logger: l,
 	}
+
 }
 
 func (s *Service) RestorePDFFiles() error {
@@ -74,6 +75,7 @@ func (s *Service) CollectNewMdFiles() error {
 		log.Println(op, err)
 		return err
 	}
+	log.Println("files:", files)
 
 	for _, f := range files {
 		if !f.IsDir() && strings.HasSuffix(f.Name(), ".md") {
@@ -93,8 +95,11 @@ func (s *Service) CollectNewMdFiles() error {
 func findFileInDir(dir, filename string) (os.DirEntry, error) {
 	files, err := os.ReadDir(dir)
 	if err != nil {
+
 		return nil, err
 	}
+
+	log.Println("current files: ", files)
 	for _, f := range files {
 		if f.Name() == filename {
 			return f, nil

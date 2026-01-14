@@ -8,11 +8,9 @@ import (
 	"github.com/Ferari430/obsidianProject/internal/cron/cronChecker"
 	"github.com/Ferari430/obsidianProject/internal/cron/cronConverter"
 	"github.com/Ferari430/obsidianProject/internal/cron/cronSender"
-	"github.com/Ferari430/obsidianProject/internal/handlers/tgHandler"
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
 	"github.com/Ferari430/obsidianProject/internal/services/checkService"
 	"github.com/Ferari430/obsidianProject/internal/services/convertService"
-	"github.com/Ferari430/obsidianProject/internal/services/sendService"
 	"github.com/Ferari430/obsidianProject/pkg/dirManager"
 	"github.com/Ferari430/obsidianProject/pkg/logger"
 	tg "github.com/go-telegram-bot-api/telegram-bot-api/v5"
@@ -36,33 +34,33 @@ func NewApp() *App {
 
 	cfg := config.LoadConfig()
 
-	bot, err := initTg(cfg.Tg)
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	t1 := time.NewTicker(time.Second * 40) // cronConverter
-	srv1 := convertService.NewConvertService(postgres, l)
+	// bot, err := initTg(cfg.Tg)
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+	t1 := time.NewTicker(time.Second * 9) // cronConverter
+	srv1 := convertService.NewConvertService(cfg.AppCfg.Root,
+		cfg.AppCfg.Sep, cfg.AppCfg.PandocPath, cfg.AppCfg.WkhtmltopdfPdf, postgres, l)
 	converter := cronConverter.NewCron(t1, srv1, l)
 
-	t2 := time.NewTicker(time.Second * 14) // cronChecker
-	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
+	t2 := time.NewTicker(time.Second * 5) // cronChecker
 	ch := make(chan struct{})
-	srv2 := checkService.NewCheckService(root, postgres, l)
+
+	srv2 := checkService.NewCheckService(cfg.AppCfg.Root, postgres, l)
 	checker := cronChecker.NewCronChecker(t2, srv2, ch, l)
 
-	t3 := time.NewTicker(time.Second * 60)
+	// t3 := time.NewTicker(time.Second * 60)
 
-	sendS := sendService.NewSendService(postgres)
-	tgh := tgHandler.TgHandler{Bot: bot,
-		SendService: sendS,
-	}
-	cS := cronSender.NewCronSender(tgh, t3)
+	// sendS := sendService.NewSendService(postgres)
+	// tgh := tgHandler.TgHandler{Bot: bot,
+	// 	SendService: sendS,
+	// }
+	// cS := cronSender.NewCronSender(tgh, t3)
 
 	application := &App{
 		cronConverter: converter,
 		cronChecker:   checker,
-		cronSender:    cS,
+		// cronSender:    cS,
 	}
 	return application
 }
@@ -73,7 +71,7 @@ func (a *App) Start() {
 	dm := dirManager.NewDirManager(allDir)
 	dm.Check()
 
-	go a.cronSender.Start()
+	// go a.cronSender.Start()
 
 	go a.cronChecker.Run()
 	time.Sleep(time.Second * 2)

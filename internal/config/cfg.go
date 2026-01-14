@@ -3,16 +3,23 @@ package config
 import (
 	"log"
 	"os"
-
-	"github.com/joho/godotenv"
+	"runtime"
 )
 
 type Config struct {
-	Tg TgBotCfg
+	TgCfg  TgBotCfg
+	AppCfg AppConfig
 }
 
 type TgBotCfg struct {
 	Token string
+}
+
+type AppConfig struct {
+	Root           string
+	Sep            string
+	PandocPath     string
+	WkhtmltopdfPdf string
 }
 
 func LoadConfig() *Config {
@@ -26,14 +33,34 @@ func LoadConfig() *Config {
 }
 
 func NewConfig() (*Config, error) {
-	path := "/home/user/programmin/obsidianProject/.env"
+	var (
+		p           string
+		s           string
+		pandoc      string
+		wkhtmltopdf string
+	)
+	System := runtime.GOOS
 
-	if err := godotenv.Load(path); err != nil {
-		return nil, err
+	switch System {
+	case "limux":
+		p = `/home/user/programmin/obsidianProject/data/obsidianProject/`
+		s = `/`
+		pandoc = "pandoc"
+		wkhtmltopdf = "wkhtmltopdf"
 
+	case "windows":
+		p = `B:\programmin-20260114T065921Z-1-001\programmin\obsidianProject\data\obsidianProject`
+		s = `\`
+		pandoc = `C:\Program Files\Pandoc\pandoc.exe`
+		wkhtmltopdf = `C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe`
 	}
-	
+
 	return &Config{
-		Tg: TgBotCfg{Token: os.Getenv("TOKEN")},
+		TgCfg: TgBotCfg{Token: os.Getenv("TOKEN")},
+		AppCfg: AppConfig{Root: p,
+			Sep:            s,
+			PandocPath:     pandoc,
+			WkhtmltopdfPdf: wkhtmltopdf,
+		},
 	}, nil
 }
