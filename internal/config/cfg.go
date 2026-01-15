@@ -2,7 +2,6 @@ package config
 
 import (
 	"log"
-	"os"
 	"runtime"
 )
 
@@ -54,9 +53,9 @@ func NewConfig() (*Config, error) {
 		pandoc = `C:\Program Files\Pandoc\pandoc.exe`
 		wkhtmltopdf = `C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe`
 	}
-
+	// убрать токен
 	return &Config{
-		TgCfg: TgBotCfg{Token: os.Getenv("TOKEN")},
+		TgCfg: TgBotCfg{Token: "8401341890:AAFGkFp684unx8941oPvHgB_F1j0knDkNAQ"},
 		AppCfg: AppConfig{Root: p,
 			Sep:            s,
 			PandocPath:     pandoc,

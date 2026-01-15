@@ -54,7 +54,15 @@ func (c *ConvertService) RemoveFromConverter(fileName string) error {
 }
 
 func (c *ConvertService) UpdateFileModifyTime(fileName string) error {
-	return c.db.UpdateFileModifyTime(fileName)
+	log.Println("filename:", fileName)
+	fileInfo, err := os.Stat(fileName)
+	if err != nil {
+		log.Printf("---------%s----------", fileName)
+		log.Printf("ошибка получения информации о файле %s: %v", fileName, err)
+		return err
+	}
+
+	return c.db.UpdateFileModifyTime(fileName, fileInfo.ModTime())
 }
 
 func (c *ConvertService) SearchPictureName(path string) {
@@ -152,6 +160,19 @@ func (c *ConvertService) ConvertMdToPDF(fileName string) {
 	err = c.ConvertHTMLToPDF(html, pdf)
 	if err != nil {
 		c.logger.Error("cant convert html file to pdf", slog.String("op", op), slog.String("error:", err.Error()))
+	}
+
+	err = c.UpdateFileModifyTime(md)
+	if err != nil {
+		c.logger.Error("cant update file time modification", slog.String("op", op), slog.String("error:", err.Error()))
+	}
+
+	err = c.RemoveFromConverter(fileName)
+	if err != nil {
+		c.logger.Error("cant delete file from converter slice", slog.String("op", op), slog.String("error:", err.Error()))
+	}
+	if err == nil {
+		log.Printf("конвертация файла %s прошла успешно", fileName)
 	}
 
 }

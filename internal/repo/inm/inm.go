@@ -5,7 +5,9 @@ import (
 	"log"
 	"math/rand"
 	"os"
+	"strings"
 	"sync"
+	"time"
 
 	"github.com/Ferari430/obsidianProject/internal/models"
 )
@@ -82,24 +84,23 @@ func (s *Postgres) RemoveFromConverter(fileName string) error {
 	return errors.New("файл не найден в очереди конвертации")
 }
 
-func (s *Postgres) UpdateFileModifyTime(fileName string) error {
+func (s *Postgres) UpdateFileModifyTime(fileName string, modifyedAt time.Time) error {
+	log.Println(`UpdateFileModifyTime`)
 	s.mu.Lock()
 	defer s.mu.Unlock()
-
 	for _, f := range s.table {
-		if f.FPath == fileName {
-			// Обновляем время модификации из файловой системы
-			fileInfo, err := os.Stat("/home/user/programmin/obsidianProject/data/obsidianProject/" + fileName)
-			if err != nil {
-				log.Printf("ошибка получения информации о файле %s: %v", fileName, err)
-				return err
-			}
-			f.ModifyedAt = fileInfo.ModTime()
+		// govnokod
+		name := strings.Split(fileName, `\`)
+
+		if f.FPath == name[len(name)-1] {
+
+			f.ModifyedAt = modifyedAt
 			f.NeedToConvert = false
-			log.Printf("время модификации файла %s обновлено на %v", fileName, fileInfo.ModTime())
+			log.Printf("время модификации файла %s обновлено на %v", fileName, modifyedAt)
 			return nil
 		}
 	}
+
 	return errors.New("файл не найден в таблице")
 }
 
