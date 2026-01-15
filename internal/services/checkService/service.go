@@ -29,7 +29,7 @@ func NewCheckService(root string, db *inm.Postgres, l *logger.Logger) *Service {
 func (s *Service) RestorePDFFiles() error {
 	op := "CronChecker.RestorePDFFiles"
 	var files []os.DirEntry
-
+	log.Println("ROOT=", s.root)
 	allFiles, err := os.ReadDir(s.root)
 	if err != nil {
 		log.Println(op, err)
@@ -75,6 +75,7 @@ func (s *Service) CollectNewMdFiles() error {
 		log.Println(op, err)
 		return err
 	}
+
 	log.Println("files:", files)
 
 	for _, f := range files {

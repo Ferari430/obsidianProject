@@ -42,7 +42,7 @@ func NewConfig() (*Config, error) {
 	System := runtime.GOOS
 
 	switch System {
-	case "limux":
+	case "linux":
 		p = `/home/user/programmin/obsidianProject/data/obsidianProject/`
 		s = `/`
 		pandoc = "pandoc"
