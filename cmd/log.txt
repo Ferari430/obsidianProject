@@ -1,0 +1,993 @@
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\Без названия.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\Каналы на макссималках 2.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\атомики.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\каналы на максималках.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\acid.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\bitmap scan.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\foreign key.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\id serial vs Guid.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\B-tree устройство.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\BRIN Index_.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\GIN полнотекстовый поиск.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\GIST геометрический.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\btree.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\gin practise.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\hash practice.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\hash.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\index по выражениям.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\practice составной индекс.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\practice1.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\СОСТАВНОЙ ИНДЕКС.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\индексы.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\main.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\Репликация и сар теорепа.md     
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\шардирование ВЕРТИКАЛЬНОЕ.md    
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\шардирование ГОРИЗОНАТЛЬНОЕ.md  
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\sql vs noSQL.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\Неповторяющееся чтение почему это плохо.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Без названия.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Нормализация.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\Проблемы с бд.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\Тормозит запрос что делать.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\Уровни изоляции транзакций и аномалии.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\где хранить данные.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\отношения между таблицами.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\db\селективность запросов.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\Channels.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\REST.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\SOLID.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\data types.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\type switch.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\Встраивание.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\Го - императивный.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\Количество горутин.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\Чем плох орм.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\general\Что нравится в го.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Async Syscall or как обрабатываются сетевые запросы планировщиком_.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Work stealing и глоабльная очередь.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\long running task.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\netPoller.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\sync syscall.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Зачем в го свой планировщик_.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Общее.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Особенности планировщика го.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Планировщик ОС и потоки.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Потоки.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\горутина.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\nil.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\Без названия.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\что бывает на собесах.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\Устройство мапы.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\Эвакуация данных.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\итерации по мапе.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\подробный разбор мапы.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\поиск по ключу.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\сложность вставки в мапу.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\что нужно знать про мапы.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\append.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\Что такое слайс.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\задачи.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\механика ссылочного типа.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\объявление слайса.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\строки\Основное.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\строки\задача.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\nil value.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\GC.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Как меньше вызывать GC.md      
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Параметры настройки сборщика.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Трехцветная разметка.md        
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Стэк и куча.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Указатели или ссылки.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\loadFactor.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE_OLD.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\CHECKLIST.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\Drawing 2026-01-11 01.44.52.excalidraw.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\EXAMPLES.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\FIXES_SUMMARY.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\FULL_CHANGELOG.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\INDEX.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\MICROSERVICES_ARCHITECTURE.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\OBSIDIAN PROJECT.excalidraw.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\PROJECT_CONTEXT.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\QUICK_REFERENCE.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\README.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\REPORT.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\SYNCHRONIZATION_FIXES.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\VISUAL_GUIDE.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\tg_sender layout.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\obsidian project\Проблемы.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\postgresql.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\test_conversion.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\1.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\2.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\3.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\4.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\5.md
+2026/01/23 16:29:47 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\6.md
+2026/01/23 16:29:47 [COLLECTOR] Найдено MD файлов: 176
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\async (chan with buffer).md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\blocking gorutine forever.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\blocking operation in generator.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\ctx.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\data race.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\nil chan.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\non-blocking channels.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\signals.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Закрытие канала.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Каналы.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Приоритизация кейса чтения из канала.md    
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\ждем данные из нескольких каналов.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\однонаправленные каналы.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\main.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\old hashMap.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\коллизия.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\практика по мапам.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\хэшФункция.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\strings\1.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.18.50.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.00.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.55.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.54.09.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.57.10.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.58.39.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.02.02.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.06.33.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.09.26.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.11.13.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.13.27.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.16.40.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.18.45.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.22.10.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.29.39.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.57.37.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.59.12.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.35.39.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.53.12.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 00.03.24.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 04.53.55.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 05.02.41.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.11.28.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.15.20.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.18.47.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.45.13.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.48.35.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.55.03.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.02.26.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.15.02.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.19.08.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.27.45.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.31.13.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.38.20.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 08.29.25.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.24.29.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.31.52.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.29.03.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.30.50.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.38.40.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.40.22.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.43.36.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.51.06.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 23.08.37.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-17 11.50.22.excalidraw.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-23 20.44.16.excalidraw.md       
+2026/01/23 16:29:47 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\docker.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\channels.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\fanIN.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\gomaxprocs.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\Без названия.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\Каналы на макссималках 2.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\атомики.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\каналы на максималках.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\acid.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\bitmap scan.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\foreign key.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\id serial vs Guid.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\B-tree устройство.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\BRIN Index_.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\GIN полнотекстовый поиск.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\GIST геометрический.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\btree.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\gin practise.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\hash practice.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\hash.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\index по выражениям.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\practice составной индекс.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\practice1.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\СОСТАВНОЙ ИНДЕКС.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\индексы.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\main.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\Репликация и сар теорепа.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\шардирование ВЕРТИКАЛЬНОЕ.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\шардирование ГОРИЗОНАТЛЬНОЕ.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sql vs noSQL.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Неповторяющееся чтение почему это плохо.md    
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Без названия.md 
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Нормализация.md 
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Проблемы с бд.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Тормозит запрос что делать.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Уровни изоляции транзакций и аномалии.md      
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\где хранить данные.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\отношения между таблицами.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\селективность запросов.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Channels.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\REST.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\SOLID.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\data types.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\type switch.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Встраивание.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Го - императивный.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Количество горутин.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Чем плох орм.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Что нравится в го.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Async Syscall or как обрабатываются сетевые запросы планировщиком_.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Work stealing и глоабльная очередь.md  
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\long running task.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\netPoller.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\sync syscall.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Зачем в го свой планировщик_.md        
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Общее.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Особенности планировщика го.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Планировщик ОС и потоки.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Потоки.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\горутина.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\nil.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\Без названия.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\что бывает на собесах.md 
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\Устройство мапы.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\Эвакуация данных.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\итерации по мапе.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\подробный разбор мапы.md       
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\поиск по ключу.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\сложность вставки в мапу.md    
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\что нужно знать про мапы.md    
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\append.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\Что такое слайс.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\задачи.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\механика ссылочного типа.md  
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\объявление слайса.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\строки\Основное.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\строки\задача.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\nil value.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\GC.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Как меньше вызывать GC.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Параметры настройки сборщика.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Трехцветная разметка.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Стэк и куча.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Указатели или ссылки.md
+2026/01/23 16:29:47 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\loadFactor.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE_OLD.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\CHECKLIST.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\Drawing 2026-01-11 01.44.52.excalidraw.md 
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\EXAMPLES.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\FIXES_SUMMARY.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\FULL_CHANGELOG.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\INDEX.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\MICROSERVICES_ARCHITECTURE.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\OBSIDIAN PROJECT.excalidraw.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\PROJECT_CONTEXT.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\QUICK_REFERENCE.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\README.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\REPORT.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\SYNCHRONIZATION_FIXES.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\VISUAL_GUIDE.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\tg_sender layout.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\Проблемы.md
+2026/01/23 16:29:47 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\postgresql.md
+2026/01/23 16:29:47 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\test_conversion.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\1.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\2.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\3.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\4.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\5.md
+2026/01/23 16:29:47 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\6.md
+2026/01/23 16:29:47 [STATS] Новых: 0, Изменено: 4, Пропущено: 172, Всего в очереди: 8
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\async (chan with buffer).md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\blocking gorutine forever.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\blocking operation in generator.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\ctx.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\data race.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\nil chan.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\non-blocking channels.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\signals.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\Закрытие канала.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\Каналы.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\Приоритизация кейса чтения из канала.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\ждем данные из нескольких каналов.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\однонаправленные каналы.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\main.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\old hashMap.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\коллизия.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\практика по мапам.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\хэшФункция.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\DeepGo\strings\1.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.18.50.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.00.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.55.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.54.09.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.57.10.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.58.39.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.02.02.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.06.33.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.09.26.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.11.13.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.13.27.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.16.40.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.18.45.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.22.10.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.29.39.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.57.37.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.59.12.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.35.39.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.53.12.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 00.03.24.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 04.53.55.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 05.02.41.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.11.28.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.15.20.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.18.47.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.45.13.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.48.35.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.55.03.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.02.26.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.15.02.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.19.08.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.27.45.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.31.13.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.38.20.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 08.29.25.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.24.29.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.31.52.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.29.03.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.30.50.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.38.40.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.40.22.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.43.36.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.51.06.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 23.08.37.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-17 11.50.22.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-23 20.44.16.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\docker.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\channels.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\fanIN.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\gomaxprocs.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\Без названия.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\Каналы на макссималках 2.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\атомики.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\каналы на максималках.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\acid.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\bitmap scan.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\foreign key.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\id serial vs Guid.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\B-tree устройство.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\BRIN Index_.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\GIN полнотекстовый поиск.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\GIST геометрический.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\btree.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\gin practise.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\hash practice.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\hash.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\index по выражениям.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\practice составной индекс.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\practice1.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\СОСТАВНОЙ ИНДЕКС.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\индексы.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\main.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\Репликация и сар теорепа.md     
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\шардирование ВЕРТИКАЛЬНОЕ.md    
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\шардирование ГОРИЗОНАТЛЬНОЕ.md  
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\sql vs noSQL.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\Неповторяющееся чтение почему это плохо.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Без названия.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Нормализация.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\Проблемы с бд.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\Тормозит запрос что делать.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\Уровни изоляции транзакций и аномалии.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\где хранить данные.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\отношения между таблицами.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\db\селективность запросов.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\Channels.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\REST.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\SOLID.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\data types.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\type switch.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\Встраивание.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\Го - императивный.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\Количество горутин.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\Чем плох орм.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\general\Что нравится в го.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Async Syscall or как обрабатываются сетевые запросы планировщиком_.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Work stealing и глоабльная очередь.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\long running task.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\netPoller.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\sync syscall.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Зачем в го свой планировщик_.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Общее.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Особенности планировщика го.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Планировщик ОС и потоки.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Потоки.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\горутина.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\nil.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\Без названия.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\что бывает на собесах.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\Устройство мапы.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\Эвакуация данных.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\итерации по мапе.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\подробный разбор мапы.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\поиск по ключу.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\сложность вставки в мапу.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\что нужно знать про мапы.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\append.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\Что такое слайс.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\задачи.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\механика ссылочного типа.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\объявление слайса.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\строки\Основное.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\строки\задача.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\nil value.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\GC.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Как меньше вызывать GC.md      
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Параметры настройки сборщика.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Трехцветная разметка.md        
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Стэк и куча.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Указатели или ссылки.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\loadFactor.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE_OLD.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\CHECKLIST.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\Drawing 2026-01-11 01.44.52.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\EXAMPLES.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\FIXES_SUMMARY.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\FULL_CHANGELOG.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\INDEX.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\MICROSERVICES_ARCHITECTURE.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\OBSIDIAN PROJECT.excalidraw.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\PROJECT_CONTEXT.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\QUICK_REFERENCE.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\README.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\REPORT.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\SYNCHRONIZATION_FIXES.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\VISUAL_GUIDE.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\tg_sender layout.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\obsidian project\Проблемы.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\postgresql.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\test_conversion.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\1.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\2.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\3.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\4.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\5.md
+2026/01/23 16:29:52 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\6.md
+2026/01/23 16:29:52 [COLLECTOR] Найдено MD файлов: 176
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\async (chan with buffer).md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\blocking gorutine forever.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\blocking operation in generator.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\ctx.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\data race.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\nil chan.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\non-blocking channels.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\signals.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Закрытие канала.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Каналы.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Приоритизация кейса чтения из канала.md    
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\ждем данные из нескольких каналов.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\однонаправленные каналы.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\main.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\old hashMap.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\коллизия.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\практика по мапам.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\хэшФункция.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\strings\1.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.18.50.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.00.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.55.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.54.09.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.57.10.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.58.39.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.02.02.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.06.33.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.09.26.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.11.13.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.13.27.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.16.40.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.18.45.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.22.10.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.29.39.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.57.37.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.59.12.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.35.39.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.53.12.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 00.03.24.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 04.53.55.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 05.02.41.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.11.28.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.15.20.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.18.47.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.45.13.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.48.35.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.55.03.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.02.26.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.15.02.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.19.08.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.27.45.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.31.13.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.38.20.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 08.29.25.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.24.29.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.31.52.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.29.03.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.30.50.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.38.40.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.40.22.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.43.36.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.51.06.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 23.08.37.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-17 11.50.22.excalidraw.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-23 20.44.16.excalidraw.md       
+2026/01/23 16:29:52 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\docker.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\channels.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\fanIN.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\gomaxprocs.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\Без названия.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\Каналы на макссималках 2.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\атомики.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\каналы на максималках.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\acid.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\bitmap scan.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\foreign key.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\id serial vs Guid.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\B-tree устройство.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\BRIN Index_.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\GIN полнотекстовый поиск.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\GIST геометрический.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\btree.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\gin practise.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\hash practice.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\hash.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\index по выражениям.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\practice составной индекс.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\practice1.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\СОСТАВНОЙ ИНДЕКС.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\индексы.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\main.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\Репликация и сар теорепа.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\шардирование ВЕРТИКАЛЬНОЕ.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\шардирование ГОРИЗОНАТЛЬНОЕ.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sql vs noSQL.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Неповторяющееся чтение почему это плохо.md    
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Без названия.md 
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Нормализация.md 
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Проблемы с бд.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Тормозит запрос что делать.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Уровни изоляции транзакций и аномалии.md      
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\где хранить данные.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\отношения между таблицами.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\селективность запросов.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Channels.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\REST.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\SOLID.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\data types.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\type switch.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Встраивание.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Го - императивный.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Количество горутин.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Чем плох орм.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Что нравится в го.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Async Syscall or как обрабатываются сетевые запросы планировщиком_.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Work stealing и глоабльная очередь.md  
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\long running task.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\netPoller.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\sync syscall.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Зачем в го свой планировщик_.md        
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Общее.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Особенности планировщика го.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Планировщик ОС и потоки.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Потоки.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\горутина.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\nil.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\Без названия.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\что бывает на собесах.md 
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\Устройство мапы.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\Эвакуация данных.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\итерации по мапе.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\подробный разбор мапы.md       
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\поиск по ключу.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\сложность вставки в мапу.md    
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\что нужно знать про мапы.md    
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\append.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\Что такое слайс.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\задачи.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\механика ссылочного типа.md  
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\объявление слайса.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\строки\Основное.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\строки\задача.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\nil value.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\GC.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Как меньше вызывать GC.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Параметры настройки сборщика.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Трехцветная разметка.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Стэк и куча.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Указатели или ссылки.md
+2026/01/23 16:29:52 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\loadFactor.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE_OLD.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\CHECKLIST.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\Drawing 2026-01-11 01.44.52.excalidraw.md 
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\EXAMPLES.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\FIXES_SUMMARY.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\FULL_CHANGELOG.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\INDEX.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\MICROSERVICES_ARCHITECTURE.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\OBSIDIAN PROJECT.excalidraw.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\PROJECT_CONTEXT.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\QUICK_REFERENCE.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\README.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\REPORT.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\SYNCHRONIZATION_FIXES.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\VISUAL_GUIDE.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\tg_sender layout.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\Проблемы.md
+2026/01/23 16:29:52 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\postgresql.md
+2026/01/23 16:29:52 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\test_conversion.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\1.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\2.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\3.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\4.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\5.md
+2026/01/23 16:29:52 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\6.md
+2026/01/23 16:29:52 [STATS] Новых: 0, Изменено: 4, Пропущено: 172, Всего в очереди: 12
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\async (chan with buffer).md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\blocking gorutine forever.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\blocking operation in generator.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\ctx.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\data race.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\nil chan.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\non-blocking channels.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\signals.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\Закрытие канала.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\Каналы.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\Приоритизация кейса чтения из канала.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\ждем данные из нескольких каналов.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\channels\однонаправленные каналы.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\main.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\old hashMap.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\коллизия.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\практика по мапам.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\maps\хэшФункция.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\DeepGo\strings\1.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.18.50.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.00.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.55.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.54.09.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.57.10.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.58.39.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.02.02.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.06.33.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.09.26.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.11.13.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.13.27.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.16.40.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.18.45.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.22.10.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.29.39.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.57.37.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.59.12.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.35.39.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.53.12.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 00.03.24.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 04.53.55.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 05.02.41.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.11.28.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.15.20.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.18.47.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.45.13.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.48.35.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.55.03.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.02.26.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.15.02.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.19.08.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.27.45.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.31.13.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.38.20.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 08.29.25.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.24.29.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.31.52.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.29.03.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.30.50.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.38.40.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.40.22.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.43.36.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.51.06.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 23.08.37.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-17 11.50.22.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\Excalidraw\Drawing 2025-12-23 20.44.16.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\docker.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\channels.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\fanIN.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\gomaxprocs.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\Без названия.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\Каналы на макссималках 2.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\атомики.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\concurrency\каналы на максималках.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\acid.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\bitmap scan.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\foreign key.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\id serial vs Guid.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\B-tree устройство.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\BRIN Index_.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\GIN полнотекстовый поиск.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\GIST геометрический.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\btree.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\gin practise.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\hash practice.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\hash.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\index по выражениям.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\practice составной индекс.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\practice1.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\СОСТАВНОЙ ИНДЕКС.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\index\индексы.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\main.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\Репликация и сар теорепа.md     
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\шардирование ВЕРТИКАЛЬНОЕ.md    
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\sharding & replication\шардирование ГОРИЗОНАТЛЬНОЕ.md  
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\sql vs noSQL.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\Неповторяющееся чтение почему это плохо.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Без названия.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Нормализация.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\Проблемы с бд.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\Тормозит запрос что делать.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\Уровни изоляции транзакций и аномалии.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\где хранить данные.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\отношения между таблицами.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\db\селективность запросов.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\Channels.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\REST.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\SOLID.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\data types.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\type switch.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\Встраивание.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\Го - императивный.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\Количество горутин.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\Чем плох орм.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\general\Что нравится в го.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Async Syscall or как обрабатываются сетевые запросы планировщиком_.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Work stealing и глоабльная очередь.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\long running task.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\netPoller.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\sync syscall.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Зачем в го свой планировщик_.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Общее.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Особенности планировщика го.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Планировщик ОС и потоки.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\Потоки.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\sheduller\горутина.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\nil.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\Без названия.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\интерфейсы\что бывает на собесах.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\Устройство мапы.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\Эвакуация данных.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\итерации по мапе.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\подробный разбор мапы.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\поиск по ключу.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\сложность вставки в мапу.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\мапы\что нужно знать про мапы.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\append.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\Что такое слайс.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\задачи.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\механика ссылочного типа.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\слайсы\объявление слайса.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\строки\Основное.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\Платформа go\строки\задача.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\nil value.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\GC.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Как меньше вызывать GC.md      
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Параметры настройки сборщика.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Сборщик мусора\Трехцветная разметка.md        
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Стэк и куча.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\interview\память в го\Указатели или ссылки.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\loadFactor.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE_OLD.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\CHECKLIST.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\Drawing 2026-01-11 01.44.52.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\EXAMPLES.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\FIXES_SUMMARY.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\FULL_CHANGELOG.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\INDEX.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\MICROSERVICES_ARCHITECTURE.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\OBSIDIAN PROJECT.excalidraw.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\PROJECT_CONTEXT.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\QUICK_REFERENCE.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\README.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\REPORT.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\SYNCHRONIZATION_FIXES.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\VISUAL_GUIDE.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\tg_sender layout.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\obsidian project\Проблемы.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\postgresql.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\test_conversion.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\1.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\2.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\3.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\4.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\5.md
+2026/01/23 16:29:57 [FOUND] MD файл: B:\data\sobesVault\задачи с собесов\6.md
+2026/01/23 16:29:57 [COLLECTOR] Найдено MD файлов: 176
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\async (chan with buffer).md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\blocking gorutine forever.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\blocking operation in generator.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\ctx.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\data race.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\nil chan.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\non-blocking channels.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\signals.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Закрытие канала.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Каналы.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\Приоритизация кейса чтения из канала.md    
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\ждем данные из нескольких каналов.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\channels\однонаправленные каналы.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\main.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\old hashMap.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\коллизия.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\практика по мапам.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\maps\хэшФункция.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\DeepGo\strings\1.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.18.50.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.00.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.45.55.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.54.09.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.57.10.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 06.58.39.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.02.02.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.06.33.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.09.26.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.11.13.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.13.27.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.16.40.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.18.45.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.22.10.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-05 07.29.39.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.57.37.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 18.59.12.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.35.39.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-06 23.53.12.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 00.03.24.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 04.53.55.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 05.02.41.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.11.28.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.15.20.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.18.47.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.45.13.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.48.35.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 18.55.03.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.02.26.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.15.02.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.19.08.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.27.45.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.31.13.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-07 19.38.20.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 08.29.25.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.24.29.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 09.31.52.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.29.03.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.30.50.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.38.40.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.40.22.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.43.36.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 10.51.06.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-14 23.08.37.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-17 11.50.22.excalidraw.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\Excalidraw\Drawing 2025-12-23 20.44.16.excalidraw.md       
+2026/01/23 16:29:57 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\docker.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\channels.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\fanIN.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\gomaxprocs.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\Без названия.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\Каналы на макссималках 2.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\атомики.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\concurrency\каналы на максималках.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\acid.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\bitmap scan.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\foreign key.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\id serial vs Guid.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\B-tree устройство.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\BRIN Index_.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\GIN полнотекстовый поиск.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\GIST геометрический.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\btree.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\gin practise.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\hash practice.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\hash.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\index по выражениям.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\practice составной индекс.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\practice1.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\СОСТАВНОЙ ИНДЕКС.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\index\индексы.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\main.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\Репликация и сар теорепа.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\шардирование ВЕРТИКАЛЬНОЕ.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sharding & replication\шардирование ГОРИЗОНАТЛЬНОЕ.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\sql vs noSQL.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Неповторяющееся чтение почему это плохо.md    
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Без названия.md 
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Нормализация и Денормализация\Нормализация.md 
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Проблемы с бд.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Тормозит запрос что делать.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\Уровни изоляции транзакций и аномалии.md      
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\где хранить данные.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\отношения между таблицами.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\db\селективность запросов.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Channels.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\REST.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\SOLID.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\data types.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\type switch.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Встраивание.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Го - императивный.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Количество горутин.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Чем плох орм.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\general\Что нравится в го.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Async Syscall or как обрабатываются сетевые запросы планировщиком_.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Work stealing и глоабльная очередь.md  
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\long running task.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\netPoller.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\sync syscall.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Зачем в го свой планировщик_.md        
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Общее.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Особенности планировщика го.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Планировщик ОС и потоки.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\Потоки.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\sheduller\горутина.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\nil.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\Без названия.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\интерфейсы\что бывает на собесах.md 
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\Устройство мапы.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\Эвакуация данных.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\итерации по мапе.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\подробный разбор мапы.md       
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\поиск по ключу.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\сложность вставки в мапу.md    
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\мапы\что нужно знать про мапы.md    
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\append.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\Что такое слайс.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\задачи.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\механика ссылочного типа.md  
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\слайсы\объявление слайса.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\строки\Основное.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\Платформа go\строки\задача.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\nil value.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\GC.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Как меньше вызывать GC.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Параметры настройки сборщика.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Сборщик мусора\Трехцветная разметка.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Стэк и куча.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\interview\память в го\Указатели или ссылки.md
+2026/01/23 16:29:57 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\loadFactor.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\ARCHITECTURE_GUIDE_OLD.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\CHECKLIST.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\Drawing 2026-01-11 01.44.52.excalidraw.md 
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\EXAMPLES.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\FIXES_SUMMARY.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\FULL_CHANGELOG.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\INDEX.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\MICROSERVICES_ARCHITECTURE.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\OBSIDIAN PROJECT.excalidraw.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\PROJECT_CONTEXT.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\QUICK_REFERENCE.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\README.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\REPORT.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\SYNCHRONIZATION_FIXES.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\VISUAL_GUIDE.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\tg_sender layout.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\obsidian project\Проблемы.md
+2026/01/23 16:29:57 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\postgresql.md
+2026/01/23 16:29:57 [MODIFY] Файл изменился и добавлен в очередь: B:\data\sobesVault\test_conversion.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\1.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\2.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\3.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\4.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\5.md
+2026/01/23 16:29:57 [SKIP] Файл не изменился: B:\data\sobesVault\задачи с собесов\6.md
+2026/01/23 16:29:57 [STATS] Новых: 0, Изменено: 4, Пропущено: 172, Всего в очереди: 16

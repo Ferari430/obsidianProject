@@ -21,16 +21,27 @@ type ConvertService struct {
 	db              *inm.Postgres
 	logger          *logger.Logger
 	Path            string
+	ScreenshotsPath string // Путь к папке со скриншотами (например: B:\data)
+	OutputPath      string // Путь к выходной папке (например: B:\output)
 	Sep             string
 	PandocPath      string
 	WkhtmltopdfPath string
 }
 
 func NewConvertService(p, sep, pandocPath, wkhtmltopdf string, db *inm.Postgres, l *logger.Logger) *ConvertService {
+	// Создаем выходную папку если её нет
+	outputPath := `B:\\output`
+
+	if _, err := os.Stat(outputPath); os.IsNotExist(err) {
+		os.MkdirAll(outputPath, 0755)
+	}
+
 	return &ConvertService{
 		db:              db,
 		logger:          l,
 		Path:            p,
+		ScreenshotsPath: `B:\\output`, // Путь к общей папке скриншотов
+		OutputPath:      outputPath,   // Путь к выходной папке
 		Sep:             sep,
 		PandocPath:      pandocPath,
 		WkhtmltopdfPath: wkhtmltopdf,
@@ -99,9 +110,16 @@ func (c *ConvertService) SearchPictureName(path string) {
 			}
 
 			fname := extractFileName(line)
-			cfn := completeFileName(fname)
-			line += cfn
-			log.Println("picture name:", cfn)
+			// Проверяем существование файла в папке скриншотов
+			screenshotPath := filepath.Join(c.ScreenshotsPath, fname)
+			if _, err := os.Stat(screenshotPath); err == nil {
+				// Файл существует, конвертируем синтаксис Obsidian в Markdown
+				cfn := completeFileNameWithPath(fname, c.ScreenshotsPath)
+				line += cfn
+				log.Println("picture name:", cfn)
+			} else {
+				log.Printf("[WARNING] Скриншот не найден: %s (искали в %s)", fname, screenshotPath)
+			}
 		}
 		// Добавляем обработанную строку в буфер
 		lines = append(lines, line)
@@ -180,8 +198,13 @@ func (c *ConvertService) ConvertMdToPDF(fileName string) {
 func (c *ConvertService) getAbsPath(fileName string) (string, string, string) {
 	absFileName := c.Path + c.Sep + fileName
 	log.Printf("из имени %s сделали %s путь", fileName, absFileName)
-	html := c.ReplaceExtension(absFileName, ".md", ".html")
-	pdf := c.ReplaceExtension(absFileName, ".md", ".pdf")
+
+	// Получаем имя файла без расширения
+	fileNameWithoutExt := strings.TrimSuffix(filepath.Base(fileName), ".md")
+
+	// Сохраняем HTML и PDF в выходную папку
+	html := filepath.Join(c.OutputPath, fileNameWithoutExt+".html")
+	pdf := filepath.Join(c.OutputPath, fileNameWithoutExt+".pdf")
 
 	return absFileName, html, pdf
 }
@@ -214,6 +237,13 @@ func completeFileName(s string) string {
 	return fmt.Sprintf("(./%s)", s)
 }
 
+// completeFileNameWithPath конвертирует синтаксис Obsidian в Markdown с полным путём
+func completeFileNameWithPath(fileName string, screenshotsPath string) string {
+	// Преобразуем абсолютный путь в относительный для использования в HTML/PDF
+	// Для простоты возвращаем путь к скриншотам
+	return fmt.Sprintf("(%s)", filepath.Join(screenshotsPath, fileName))
+}
+
 func (c *ConvertService) ReplaceExtension(s string, oldExt, newExt string) string {
 	// text.md --> text.html
 	return strings.Replace(s, oldExt, newExt, -1)
@@ -223,8 +253,9 @@ func (c *ConvertService) SetContentToModel(file *models.File) error {
 	op := "convertService.SetContentToModel"
 	newFilename := file.FPath
 	a := dirManager.ReplaceExtension(newFilename, ".md", ".pdf")
-	path := filepath.Join(c.Path, a)
-	log.Println("path: ", path)
+	// Сохраняем PDF в выходную папку
+	path := filepath.Join(c.OutputPath, filepath.Base(a))
+	log.Println("path1: ", path)
 	f, err := os.OpenFile(path, os.O_RDWR, 0666)
 
 	defer func() {

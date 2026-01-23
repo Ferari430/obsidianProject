@@ -4,8 +4,10 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"strings"
 
+	"github.com/Ferari430/obsidianProject/internal/models"
 	"github.com/Ferari430/obsidianProject/internal/repo/inm"
 	"github.com/Ferari430/obsidianProject/pkg"
 	"github.com/Ferari430/obsidianProject/pkg/logger"
@@ -50,7 +52,7 @@ func (s *Service) RestorePDFFiles() error {
 
 	log.Println("Restored files:", len(files))
 	for _, f := range files {
-		content, err := pkg.GetContentFromFile(f.Name())
+		content, err := pkg.GetContentFromFile(f.Name(), s.root)
 		if err != nil {
 			log.Println(op, err)
 			return err
@@ -68,29 +70,55 @@ func (s *Service) RestorePDFFiles() error {
 
 func (s *Service) CollectNewMdFiles() error {
 	op := "CronChecker.CollectMdFiles"
-	var collectedMdFiles []os.DirEntry
 
-	files, err := os.ReadDir(s.root)
+	// Рекурсивно собираем все MD файлы со всех подпапок
+	collectedMdFiles, err := s.collectMdFilesRecursive(s.root)
 	if err != nil {
 		log.Println(op, err)
 		return err
 	}
 
-	log.Println("files:", files)
+	log.Printf("[COLLECTOR] Найдено MD файлов: %d", len(collectedMdFiles))
 
-	for _, f := range files {
-		if !f.IsDir() && strings.HasSuffix(f.Name(), ".md") {
-			log.Println("Found MD file:", f.Name())
-			collectedMdFiles = append(collectedMdFiles, f)
-		}
-	}
-
-	if err := s.db.Add(collectedMdFiles); err != nil {
+	if err := s.db.AddWithFullPath(collectedMdFiles); err != nil {
 		log.Println(op, err)
 		return err
 	}
 
 	return nil
+}
+
+// collectMdFilesRecursive рекурсивно собирает все MD файлы из корневой папки и подпапок
+func (s *Service) collectMdFilesRecursive(dir string) ([]models.MDFile, error) {
+	var mdFiles []models.MDFile
+
+	files, err := os.ReadDir(dir)
+	if err != nil {
+		return nil, err
+	}
+
+	for _, f := range files {
+		if f.IsDir() {
+			// Рекурсивно обрабатываем подпапки
+			subPath := filepath.Join(dir, f.Name())
+			subMdFiles, err := s.collectMdFilesRecursive(subPath)
+			if err != nil {
+				log.Printf("[WARNING] Ошибка при чтении папки %s: %v", subPath, err)
+				continue // Продолжаем даже если была ошибка в одной из подпапок
+			}
+			mdFiles = append(mdFiles, subMdFiles...)
+		} else if strings.HasSuffix(f.Name(), ".md") {
+			fullPath := filepath.Join(dir, f.Name())
+			log.Printf("[FOUND] MD файл: %s", fullPath)
+			mdFiles = append(mdFiles, models.MDFile{
+				Name:     f.Name(),
+				FullPath: fullPath,
+				DirEntry: f,
+			})
+		}
+	}
+
+	return mdFiles, nil
 }
 
 func findFileInDir(dir, filename string) (os.DirEntry, error) {

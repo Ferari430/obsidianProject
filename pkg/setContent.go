@@ -10,9 +10,8 @@ import (
 	"github.com/Ferari430/obsidianProject/pkg/dirManager"
 )
 
-func SetContentToModel(file *models.File) error {
+func SetContentToModel(file *models.File, root string) error {
 	op := "pkg.SetContentToModel"
-	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
 	newFilename := file.FPath
 	a := dirManager.ReplaceExtension(newFilename, ".md", ".pdf")
 	path := filepath.Join(root, a)
@@ -41,9 +40,8 @@ func SetContentToModel(file *models.File) error {
 	return nil
 }
 
-func GetContentFromFile(fname string) ([]byte, error) {
+func GetContentFromFile(fname string, root string) ([]byte, error) {
 	op := "pkg.SetContentToModel"
-	root := "/home/user/programmin/obsidianProject/data/obsidianProject/"
 	newFilename := fname
 	a := dirManager.ReplaceExtension(newFilename, ".md", ".pdf")
 	path := filepath.Join(root, a)

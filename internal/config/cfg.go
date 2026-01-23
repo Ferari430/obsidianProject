@@ -6,12 +6,7 @@ import (
 )
 
 type Config struct {
-	TgCfg  TgBotCfg
 	AppCfg AppConfig
-}
-
-type TgBotCfg struct {
-	Token string
 }
 
 type AppConfig struct {
@@ -38,6 +33,7 @@ func NewConfig() (*Config, error) {
 		pandoc      string
 		wkhtmltopdf string
 	)
+
 	System := runtime.GOOS
 
 	switch System {
@@ -53,9 +49,8 @@ func NewConfig() (*Config, error) {
 		pandoc = `C:\Program Files\Pandoc\pandoc.exe`
 		wkhtmltopdf = `C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe`
 	}
-	// убрать токен
+
 	return &Config{
-		TgCfg: TgBotCfg{Token: "8401341890:AAFGkFp684unx8941oPvHgB_F1j0knDkNAQ"},
 		AppCfg: AppConfig{Root: p,
 			Sep:            s,
 			PandocPath:     pandoc,

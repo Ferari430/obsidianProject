@@ -30,32 +30,95 @@ func (s *Postgres) Add(collectedMdFiles []os.DirEntry) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
-	//s.converterFiles = make([]*models.File, 0)
+	newFilesCount := 0
+	modifiedFilesCount := 0
+	skippedFilesCount := 0
 
 	for _, f := range collectedMdFiles {
 		if existingFile, ok := s.checkHandledFileLocked(f); !ok {
+			// Новый файл
 			fileInfo, err := f.Info()
 			if err != nil {
 				return err
 			}
 
-			newFile := models.NewFile(f.Name(), fileInfo.ModTime())
+			newFile := models.NewFile(f.Name(), f.Name(), fileInfo.ModTime()) // Используем имя файла как FullPath для обратной совместимости
 			s.table = append(s.table, newFile)
 			s.converterFiles = append(s.converterFiles, newFile)
+			newFilesCount++
+			log.Printf("[ADD] Новый файл: %s", f.Name())
 		} else {
-			log.Println("file already in db")
+			// Файл уже известен
+			timeMatches := s.checkModifyFile(f, existingFile)
 
-			if !s.checkModifyFile(f, existingFile) {
-				log.Println("время не совпадает, конвертация файла....", existingFile.FPath)
-				s.converterFiles = append(s.converterFiles, existingFile)
+			if !timeMatches {
+				// Файл изменился
+				if !s.isFileInConverterLocked(existingFile.FPath) {
+					s.converterFiles = append(s.converterFiles, existingFile)
+					modifiedFilesCount++
+					log.Printf("[MODIFY] Файл изменился и добавлен в очередь: %s", existingFile.FPath)
+				} else {
+					log.Printf("[SKIP] Файл уже в очереди конвертации: %s", existingFile.FPath)
+				}
+			} else {
+				skippedFilesCount++
+				log.Printf("[SKIP] Файл не изменился: %s", existingFile.FPath)
 			}
 		}
 	}
 
-	log.Println("только пдф файлы:", s.getAllPDFFilesLocked())
+	log.Printf("[STATS] Новых: %d, Изменено: %d, Пропущено: %d, Всего в очереди: %d",
+		newFilesCount, modifiedFilesCount, skippedFilesCount, len(s.converterFiles))
+	return nil
+}
 
-	l := len(collectedMdFiles)
-	log.Printf("добавлено %d файлов", l)
+// AddWithFullPath добавляет MD файлы с полными путями (для рекурсивного сбора)
+func (s *Postgres) AddWithFullPath(collectedMdFiles []models.MDFile) error {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	newFilesCount := 0
+	modifiedFilesCount := 0
+	skippedFilesCount := 0
+
+	for _, mdFile := range collectedMdFiles {
+		// Проверяем, есть ли файл уже в таблице (по полному пути)
+		existingFile, ok := s.checkHandledFileByPathLocked(mdFile.FullPath)
+
+		if !ok {
+			// Новый файл
+			fileInfo, err := mdFile.DirEntry.Info()
+			if err != nil {
+				return err
+			}
+
+			newFile := models.NewFile(mdFile.Name, mdFile.FullPath, fileInfo.ModTime())
+			s.table = append(s.table, newFile)
+			s.converterFiles = append(s.converterFiles, newFile)
+			newFilesCount++
+			log.Printf("[ADD] Новый файл: %s (путь: %s)", mdFile.Name, mdFile.FullPath)
+		} else {
+			// Файл уже известен
+			timeMatches := s.checkModifyFileWithPath(mdFile.DirEntry, existingFile)
+
+			if !timeMatches {
+				// Файл изменился
+				if !s.isFileInConverterLocked(existingFile.FullPath) {
+					s.converterFiles = append(s.converterFiles, existingFile)
+					modifiedFilesCount++
+					log.Printf("[MODIFY] Файл изменился и добавлен в очередь: %s", existingFile.FullPath)
+				} else {
+					log.Printf("[SKIP] Файл уже в очереди конвертации: %s", existingFile.FullPath)
+				}
+			} else {
+				skippedFilesCount++
+				log.Printf("[SKIP] Файл не изменился: %s", existingFile.FullPath)
+			}
+		}
+	}
+
+	log.Printf("[STATS] Новых: %d, Изменено: %d, Пропущено: %d, Всего в очереди: %d",
+		newFilesCount, modifiedFilesCount, skippedFilesCount, len(s.converterFiles))
 	return nil
 }
 
@@ -127,11 +190,27 @@ func (s *Postgres) checkModifyFile(f os.DirEntry, existingFile *models.File) boo
 		return false
 	}
 
-	flag := info.ModTime() == existingFile.GetTimeMod()
+	timeMatches := info.ModTime() == existingFile.GetTimeMod()
 
-	existingFile.NeedToConvert = !flag
+	existingFile.NeedToConvert = !timeMatches
 
-	return flag
+	return timeMatches
+}
+
+// checkModifyFileWithPath проверяет изменения файла (для полных путей)
+func (s *Postgres) checkModifyFileWithPath(f os.DirEntry, existingFile *models.File) bool {
+	op := "postgres.CheckModifyFileWithPath"
+	info, err := f.Info()
+	if err != nil {
+		log.Println(op, err)
+		return false
+	}
+
+	timeMatches := info.ModTime() == existingFile.GetTimeMod()
+
+	existingFile.NeedToConvert = !timeMatches
+
+	return timeMatches
 }
 
 func (s *Postgres) checkHandledFileLocked(f os.DirEntry) (*models.File, bool) {
@@ -142,6 +221,27 @@ func (s *Postgres) checkHandledFileLocked(f os.DirEntry) (*models.File, bool) {
 	}
 
 	return nil, false
+}
+
+// checkHandledFileByPathLocked проверяет, есть ли файл в таблице по полному пути
+func (s *Postgres) checkHandledFileByPathLocked(fullPath string) (*models.File, bool) {
+	for _, file := range s.table {
+		if file.FullPath == fullPath {
+			return file, true
+		}
+	}
+	return nil, false
+}
+
+// isFileInConverterLocked проверяет, находится ли файл уже в очереди конвертации
+// Возвращает true если файл уже в очереди, false если его там нет
+func (s *Postgres) isFileInConverterLocked(fileName string) bool {
+	for _, file := range s.converterFiles {
+		if file.FPath == fileName {
+			return true
+		}
+	}
+	return false
 }
 
 func (s *Postgres) AddPDFFiles(pdfFiles []os.DirEntry, content []byte) error {
