@@ -27,10 +27,11 @@ func NewApp() *App {
 
 	t1 := time.NewTicker(time.Second * 60) // cronConverter
 	srv1 := convertService.NewConvertService(cfg.AppCfg.Root,
-		cfg.AppCfg.Sep, cfg.AppCfg.PandocPath, cfg.AppCfg.WkhtmltopdfPdf, postgres, l)
+		cfg.AppCfg.Sep, cfg.AppCfg.PandocPath, cfg.AppCfg.WkhtmltopdfPdf, cfg.AppCfg.Root, postgres, l)
 	converter := cronConverter.NewCron(t1, srv1, l)
 
-	t2 := time.NewTicker(time.Second * 5) // cronChecker
+	t2 := time.NewTicker(time.Second * 8) // cronChecker
+
 	ch := make(chan struct{})
 
 	srv2 := checkService.NewCheckService(cfg.AppCfg.Root, postgres, l)

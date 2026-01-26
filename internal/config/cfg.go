@@ -42,7 +42,6 @@ func NewConfig() (*Config, error) {
 		s = `/`
 		pandoc = "pandoc"
 		wkhtmltopdf = "wkhtmltopdf"
-
 	case "windows":
 		p = `B:\programmin-20260114T065921Z-1-001\programmin\obsidianProject\data\obsidianProject`
 		s = `\`
